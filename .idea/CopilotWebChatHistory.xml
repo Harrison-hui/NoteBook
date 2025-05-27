@@ -2784,6 +2784,339 @@
                     <list />
                   </option>
                 </UIChatMessage>
+                <UIChatMessage>
+                  <option name="actions">
+                    <list />
+                  </option>
+                  <option name="codebaseReferences">
+                    <list />
+                  </option>
+                  <option name="codebaseStatus" value="init" />
+                  <option name="command" value="" />
+                  <option name="content" value="`Recv failure: Connection was reset` 是一个常见的网络错误，通常表示在尝试从对端接收数据时，连接被对端重置。以下是一些可能的原因和解决方法：&#10;&#10;### 可能的原因&#10;&#10;1. **服务器端主动关闭连接**：服务器可能因为维护、更新、过载保护或其他原因主动关闭了连接。&#10;2. **网络问题**：网络不稳定、中断或防火墙设置可能导致连接被重置。&#10;3. **客户端异常操作**：客户端在数据传输过程中突然关闭浏览器、取消请求或断开网络连接。&#10;4. **请求超时**：如果请求的数据量过大或服务器响应时间过长，可能会导致连接超时。&#10;5. **服务器负载过高**：当服务器面临大量并发请求时，可能会因资源不足而无法及时处理所有连接。&#10;6. **防火墙或安全软件干扰**：客户端或服务器端的防火墙、安全软件可能会阻止或干扰正常的网络连接。&#10;7. **Nginx 配置问题**：如果使用 Nginx 作为反向代理服务器，其配置错误也可能导致连接被重置。&#10;8. **iptables 配置问题**：客户端或服务器端的 iptables 配置不当，可能会丢弃或拒绝某些连接。&#10;&#10;### 解决方法&#10;&#10;1. **检查网络连接**：确保网络连接正常，可以使用 `ping` 命令测试与目标服务器的网络连通性。&#10;2. **检查服务器状态**：确认目标服务器是否正常运行，可以通过浏览器或其他工具访问该服务器。&#10;3. **调整 curl 参数**：尝试增加 curl 命令的超时时间，例如使用 `-T` 选项设置超时时间为 60 秒。&#10;4. **检查防火墙和安全软件设置**：确保客户端和服务器端的防火墙、安全软件没有阻止 curl 的请求。&#10;5. **优化代码逻辑**：确保在关闭连接时正确处理所有情况，避免直接发送 RST 包。&#10;6. **使用网络诊断工具**：使用 `tcpdump` 等工具检查网络连通性和数据包丢失情况" />
+                  <option name="cost" value="25455" />
+                  <option name="createdAt" value="1748370493640" />
+                  <option name="followup">
+                    <list />
+                  </option>
+                  <option name="id" value="019713002d42733390bc1ff286bb1c1a" />
+                  <option name="knowledgeReferences">
+                    <list />
+                  </option>
+                  <option name="parser">
+                    <SimpleMarkdownStreamParser>
+                      <option name="columns">
+                        <list>
+                          <option value="87" />
+                          <option value="-1" />
+                          <option value="8" />
+                          <option value="-1" />
+                          <option value="47" />
+                          <option value="35" />
+                          <option value="45" />
+                          <option value="42" />
+                          <option value="48" />
+                          <option value="50" />
+                          <option value="54" />
+                          <option value="57" />
+                          <option value="-1" />
+                          <option value="7" />
+                          <option value="-1" />
+                          <option value="51" />
+                          <option value="47" />
+                          <option value="60" />
+                          <option value="52" />
+                          <option value="43" />
+                          <option value="46" />
+                        </list>
+                      </option>
+                      <option name="content" value="`Recv failure: Connection was reset` 是一个常见的网络错误，通常表示在尝试从对端接收数据时，连接被对端重置。以下是一些可能的原因和解决方法：&#10;&#10;### 可能的原因&#10;&#10;1. **服务器端主动关闭连接**：服务器可能因为维护、更新、过载保护或其他原因主动关闭了连接。&#10;2. **网络问题**：网络不稳定、中断或防火墙设置可能导致连接被重置。&#10;3. **客户端异常操作**：客户端在数据传输过程中突然关闭浏览器、取消请求或断开网络连接。&#10;4. **请求超时**：如果请求的数据量过大或服务器响应时间过长，可能会导致连接超时。&#10;5. **服务器负载过高**：当服务器面临大量并发请求时，可能会因资源不足而无法及时处理所有连接。&#10;6. **防火墙或安全软件干扰**：客户端或服务器端的防火墙、安全软件可能会阻止或干扰正常的网络连接。&#10;7. **Nginx 配置问题**：如果使用 Nginx 作为反向代理服务器，其配置错误也可能导致连接被重置。&#10;8. **iptables 配置问题**：客户端或服务器端的 iptables 配置不当，可能会丢弃或拒绝某些连接。&#10;&#10;### 解决方法&#10;&#10;1. **检查网络连接**：确保网络连接正常，可以使用 `ping` 命令测试与目标服务器的网络连通性。&#10;2. **检查服务器状态**：确认目标服务器是否正常运行，可以通过浏览器或其他工具访问该服务器。&#10;3. **调整 curl 参数**：尝试增加 curl 命令的超时时间，例如使用 `-T` 选项设置超时时间为 60 秒。&#10;4. **检查防火墙和安全软件设置**：确保客户端和服务器端的防火墙、安全软件没有阻止 curl 的请求。&#10;5. **优化代码逻辑**：确保在关闭连接时正确处理所有情况，避免直接发送 RST 包。&#10;6. **使用网络诊断工具**：使用 `tcpdump` 等工具检查网络连通性和数据包丢失情况&#10;" />
+                      <option name="nodes">
+                        <list>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="`Recv failure: Connection was reset` 是一个常见的网络错误，通常表示在尝试从对端接收数据时，连接被对端重置。以下是一些可能的原因和解决方法：" />
+                            <option name="contentId" value="1525425842" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value=" 可能的原因" />
+                            <option name="contentId" value="298563287" />
+                            <option name="level" value="3" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="heading" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="1. **服务器端主动关闭连接**：服务器可能因为维护、更新、过载保护或其他原因主动关闭了连接。" />
+                            <option name="contentId" value="-407823244" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="2. **网络问题**：网络不稳定、中断或防火墙设置可能导致连接被重置。" />
+                            <option name="contentId" value="402685718" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="3. **客户端异常操作**：客户端在数据传输过程中突然关闭浏览器、取消请求或断开网络连接。" />
+                            <option name="contentId" value="-1691999697" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="4. **请求超时**：如果请求的数据量过大或服务器响应时间过长，可能会导致连接超时。" />
+                            <option name="contentId" value="1304213581" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="5. **服务器负载过高**：当服务器面临大量并发请求时，可能会因资源不足而无法及时处理所有连接。" />
+                            <option name="contentId" value="348072990" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="6. **防火墙或安全软件干扰**：客户端或服务器端的防火墙、安全软件可能会阻止或干扰正常的网络连接。" />
+                            <option name="contentId" value="1284099454" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="7. **Nginx 配置问题**：如果使用 Nginx 作为反向代理服务器，其配置错误也可能导致连接被重置。" />
+                            <option name="contentId" value="-1068809707" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="8. **iptables 配置问题**：客户端或服务器端的 iptables 配置不当，可能会丢弃或拒绝某些连接。" />
+                            <option name="contentId" value="321907731" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value=" 解决方法" />
+                            <option name="contentId" value="1102079628" />
+                            <option name="level" value="3" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="heading" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="1. **检查网络连接**：确保网络连接正常，可以使用 `ping` 命令测试与目标服务器的网络连通性。" />
+                            <option name="contentId" value="-1942341055" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="2. **检查服务器状态**：确认目标服务器是否正常运行，可以通过浏览器或其他工具访问该服务器。" />
+                            <option name="contentId" value="146373413" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="3. **调整 curl 参数**：尝试增加 curl 命令的超时时间，例如使用 `-T` 选项设置超时时间为 60 秒。" />
+                            <option name="contentId" value="352473418" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="4. **检查防火墙和安全软件设置**：确保客户端和服务器端的防火墙、安全软件没有阻止 curl 的请求。" />
+                            <option name="contentId" value="-736379944" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="5. **优化代码逻辑**：确保在关闭连接时正确处理所有情况，避免直接发送 RST 包。" />
+                            <option name="contentId" value="575941522" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="6. **使用网络诊断工具**：使用 `tcpdump` 等工具检查网络连通性和数据包丢失情况" />
+                            <option name="contentId" value="1506212381" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="false" />
+                            <option name="type" value="undetermined" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                        </list>
+                      </option>
+                      <option name="parserState">
+                        <ParserState>
+                          <option name="line" value="21" />
+                          <option name="column" value="-1" />
+                          <option name="offset" value="817" />
+                          <option name="moveCursor" value="true" />
+                        </ParserState>
+                      </option>
+                    </SimpleMarkdownStreamParser>
+                  </option>
+                  <option name="references">
+                    <list />
+                  </option>
+                  <option name="role" value="assistant" />
+                  <option name="topic" value="" />
+                </UIChatMessage>
               </list>
             </option>
             <option name="messagesV3">
@@ -2883,6 +3216,23 @@
                     <ChatMessageExtra />
                   </option>
                 </ChatMessageV3>
+                <ChatMessageV3>
+                  <option name="role" value="user" />
+                  <option name="content" value="&#10;```&#10;Recv failure: Connection was reset&#10;```" />
+                  <option name="extra">
+                    <ChatMessageExtra>
+                      <option name="agent" value="default" />
+                      <option name="cmd" value="default" />
+                    </ChatMessageExtra>
+                  </option>
+                </ChatMessageV3>
+                <ChatMessageV3>
+                  <option name="role" value="assistant" />
+                  <option name="content" value="`Recv failure: Connection was reset` 是一个常见的网络错误，通常表示在尝试从对端接收数据时，连接被对端重置。以下是一些可能的原因和解决方法：&#10;&#10;### 可能的原因&#10;&#10;1. **服务器端主动关闭连接**：服务器可能因为维护、更新、过载保护或其他原因主动关闭了连接。&#10;2. **网络问题**：网络不稳定、中断或防火墙设置可能导致连接被重置。&#10;3. **客户端异常操作**：客户端在数据传输过程中突然关闭浏览器、取消请求或断开网络连接。&#10;4. **请求超时**：如果请求的数据量过大或服务器响应时间过长，可能会导致连接超时。&#10;5. **服务器负载过高**：当服务器面临大量并发请求时，可能会因资源不足而无法及时处理所有连接。&#10;6. **防火墙或安全软件干扰**：客户端或服务器端的防火墙、安全软件可能会阻止或干扰正常的网络连接。&#10;7. **Nginx 配置问题**：如果使用 Nginx 作为反向代理服务器，其配置错误也可能导致连接被重置。&#10;8. **iptables 配置问题**：客户端或服务器端的 iptables 配置不当，可能会丢弃或拒绝某些连接。&#10;&#10;### 解决方法&#10;&#10;1. **检查网络连接**：确保网络连接正常，可以使用 `ping` 命令测试与目标服务器的网络连通性。&#10;2. **检查服务器状态**：确认目标服务器是否正常运行，可以通过浏览器或其他工具访问该服务器。&#10;3. **调整 curl 参数**：尝试增加 curl 命令的超时时间，例如使用 `-T` 选项设置超时时间为 60 秒。&#10;4. **检查防火墙和安全软件设置**：确保客户端和服务器端的防火墙、安全软件没有阻止 curl 的请求。&#10;5. **优化代码逻辑**：确保在关闭连接时正确处理所有情况，避免直接发送 RST 包。&#10;6. **使用网络诊断工具**：使用 `tcpdump` 等工具检查网络连通性和数据包丢失情况" />
+                  <option name="extra">
+                    <ChatMessageExtra />
+                  </option>
+                </ChatMessageV3>
               </list>
             </option>
             <option name="sessionId" value="01970f7ee6e4788981316c3bae922116" />
@@ -2895,7 +3245,36 @@
             <option name="createTime" value="1748369907932" />
             <option name="id" value="01970f7ee6e4788981316c3bae922116" />
             <option name="title" value="生成markdown可渲染的html表格，支持可手动添加行和列，可手动选择单元格合并，单元格可手动拉伸调整长度和宽度，过长是可拉动滚动条" />
-            <option name="updateTime" value="1748369907932" />
+            <option name="turns">
+              <list>
+                <Turn>
+                  <option name="agent" value="" />
+                  <option name="answer" value="`Ivxe uzrofiv: Xlmmvxgrlm dzh ivhvg` 是一个常见的网络错误，通常表示在尝试从对端接收数据时，连接被对端重置。以下是一些可能的原因和解决方法：&#10;&#10;### 可能的原因&#10;&#10;8. **服务器端主动关闭连接**：服务器可能因为维护、更新、过载保护或其他原因主动关闭了连接。&#10;7. **网络问题**：网络不稳定、中断或防火墙设置可能导致连接被重置。&#10;6. **客户端异常操作**：客户端在数据传输过程中突然关闭浏览器、取消请求或断开网络连接。&#10;5. **请求超时**：如果请求的数据量过大或服务器响应时间过长，可能会导致连接超时。&#10;4. **服务器负载过高**：当服务器面临大量并发请求时，可能会因资源不足而无法及时处理所有连接。&#10;3. **防火墙或安全软件干扰**：客户端或服务器端的防火墙、安全软件可能会阻止或干扰正常的网络连接。&#10;2. **Mtrmc 配置问题**：如果使用 Mtrmc 作为反向代理服务器，其配置错误也可能导致连接被重置。&#10;1. **rkgzyovh 配置问题**：客户端或服务器端的 rkgzyovh 配置不当，可能会丢弃或拒绝某些连接。&#10;&#10;### 解决方法&#10;&#10;8. **检查网络连接**：确保网络连接正常，可以使用 `krmt` 命令测试与目标服务器的网络连通性。&#10;7. **检查服务器状态**：确认目标服务器是否正常运行，可以通过浏览器或其他工具访问该服务器。&#10;6. **调整 xfio 参数**：尝试增加 xfio 命令的超时时间，例如使用 `-G` 选项设置超时时间为 39 秒。&#10;5. **检查防火墙和安全软件设置**：确保客户端和服务器端的防火墙、安全软件没有阻止 xfio 的请求。&#10;4. **优化代码逻辑**：确保在关闭连接时正确处理所有情况，避免直接发送 IHG 包。&#10;3. **使用网络诊断工具**：使用 `gxkwfnk` 等工具检查网络连通性和数据包丢失情况" />
+                  <option name="chatResource" value="user" />
+                  <option name="codeReferences">
+                    <list />
+                  </option>
+                  <option name="command" value="" />
+                  <option name="conversationId" value="01970f7ee6e4788981316c3bae922116" />
+                  <option name="historyDocumentMap">
+                    <map>
+                      <entry key="file:///D:/OneDrive/文档/8.Py_Project/Learning/NoteBook/docs/Python数据分析/Python绘图/基础/图例（Legend）.md" value="# 图例（Legend）&#10;&#10;[Legend guide — Matplotlib 3.10.1 documentation](https://matplotlib.org/stable/users/explain/axes/legend_guide.html#legend-guide)&#10;&#10;[matplotlib.legend — Matplotlib 3.10.1 documentation](https://matplotlib.org/stable/api/legend_api.html)&#10;&#10;[matplotlib.axes.Axes.legend — Matplotlib 3.10.1 documentation](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.legend.html)&#10;&#10;[matplotlib.pyplot.legend — Matplotlib 3.10.1 documentation](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html)&#10;&#10;[matplotlib.figure.Figure.legend — Matplotlib 3.10.1 documentation](https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.legend.html)&#10;&#10;```Python title=&quot;导入模块与数据准备&quot; linenums=&quot;1&quot;&#10;import matplotlib as mpl&#10;import matplotlib.pyplot as plt&#10;import seaborn as sns&#10;import numpy as np&#10;&#10;x = np.arange(1, 11, 1)&#10;&quot;&quot;&quot;&#10;[  1   2   3   4   5   6   7   8   9  10]&#10;&quot;&quot;&quot;&#10;&#10;y1 = np.sin(x)&#10;&quot;&quot;&quot;&#10;[ 0.84147098  0.90929743  0.14112001 -0.7568025  -0.95892427 -0.2794155  0.6569866   0.98935825  0.41211849 -0.54402111]&#10;&quot;&quot;&quot;&#10;&#10;y2 = x+2&#10;&quot;&quot;&quot;&#10;[  3   4   5   6   7   8   9  10  11  12]&#10;&quot;&quot;&quot;&#10;&#10;y3 = np.log(x)&#10;&quot;&quot;&quot;&#10;[0.         0.69314718 1.09861229 1.38629436 1.60943791 1.79175947 1.94591015 2.07944154 2.19722458 2.30258509 2.39789527]&#10;&quot;&quot;&quot;&#10;```&#10;&#10;## 图例添加&#10;&#10;!!! note&#10;    **label** 为 **空字符串('')、'_'（默认）** 或以 **'_'开头** 的handle将被忽略&#10;&#10;### 自带标签&#10;&#10;=== &quot;Axes&quot;&#10;&#10;    ```Python title=&quot;Axes&quot; linenums=&quot;1&quot; hl_lines=&quot;11&quot;&#10;    fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;    ax = fig.add_subplot(1, 1, 1)&#10;   &#10;    l1 = ax.plot(x, y1, label='y=sin(x)', marker='o')&#10;    # l1[0].set_label(&quot;y=sin(x)&quot;)&#10;    l2 = ax.plot(x, y2, label='y=x+2', marker='o')&#10;    # l2[0].set_label(&quot;y=x+2&quot;)&#10;    l3 = ax.scatter(x, y3, label='y=ln(x)', marker='o')&#10;    # l3.set_label(&quot;y=ln(x)&quot;)&#10;   &#10;    ax.legend(handles=[l1[0], l2[0], l3])    # (1)!&#10;   &#10;    plt.show()&#10;    ```&#10;&#10;    1. 指定图形绘制图例，默认所有图形&#10;&#10;    ![img.png](../../../images/图例/img.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;=== &quot;Figure&quot;&#10;&#10;    ```Python  title=&quot;Figure&quot; linenums=&quot;1&quot; hl_lines=&quot;11&quot;&#10;    fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;    ax = fig.add_subplot(1, 1, 1)&#10;   &#10;    l1 = ax.plot(x, y1, label='y=sin(x)', marker='o')&#10;    # l1[0].set_label(&quot;y=sin(x)&quot;)&#10;    l2 = ax.plot(x, y2, label='y=x+2', marker='o')&#10;    # l2[0].set_label(&quot;y=x+2&quot;)&#10;    l3 = ax.scatter(x, y3, label='y=ln(x)', marker='o')&#10;    # l3.set_label(&quot;y=ln(x)&quot;)&#10;   &#10;    fig.legend(handles=[l1[0], l2[0], l3])    # (1)!&#10;   &#10;    plt.show()&#10;    ```&#10;&#10;    1. 指定图形绘制图例，默认所有图形&#10;&#10;    ![img.png](../../../images/图例/img_1.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;### 设置标签&#10;&#10;=== &quot;Axes&quot;&#10;&#10;    ```Python title=&quot;Axes&quot; linenums=&quot;1&quot; hl_lines=&quot;8-10&quot;&#10;    fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;    ax = fig.add_subplot(1, 1, 1)&#10;   &#10;    l1 = ax.plot(x, y1, marker='o')&#10;    l2 = ax.plot(x, y2, marker='o')&#10;    l3 = ax.scatter(x, y3, marker='o')&#10;&#10;    ax.legend(handles=[l1[0], l2[0], l3],                # (1)!&#10;              labels=['y=sin(x)', 'y=x+2', 'y=ln(x)']    # (2)!&#10;              )&#10;   &#10;    plt.show()&#10;    ```&#10;&#10;    1. 指定图形绘制图例，默认所有图形&#10;    2. 为指定的图形设置标签，用于图例绘制，覆盖自带label&#10;&#10;    ![img.png](../../../images/图例/img_2.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;=== &quot;Figure&quot;&#10;&#10;    ```Python  title=&quot;Figure&quot; linenums=&quot;1&quot; hl_lines=&quot;8-10&quot;&#10;    fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;    ax = fig.add_subplot(1, 1, 1)&#10;&#10;    l1 = ax.plot(x, y1, marker='o')&#10;    l2 = ax.plot(x, y2, marker='o')&#10;    l3 = ax.scatter(x, y3, marker='o')&#10;&#10;    fig.legend(handles=[l1[0], l2[0], l3],                # (1)!&#10;               labels=['y=sin(x)', 'y=x+2', 'y=ln(x)']    # (2)!&#10;               )&#10;&#10;    plt.show()&#10;    ```&#10;&#10;    1. 指定图形绘制图例，默认所有图形&#10;    2. 为指定的图形设置标签，用于图例绘制，覆盖自带label&#10;&#10;    ![img.png](../../../images/图例/img_3.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;## 图例位置&#10;&#10;1.  **loc**：默认`#!python rcParams[&quot;legend.loc&quot;]='best'`&#10;&#10;    a.  **位置字符串或位置代码**：图例在Axes、Figure或bounding box中的位置；图例的某个点位置&#10;&#10;        |**字符串**|**代码**|**含义**|**应用**|&#10;        |-|-|-|-|&#10;        |**'best' （默认）**|**0**|以下9种中与图形重叠最少的位置|Axes|&#10;        |**'upper right'**|**1**|右上角|Axes / Figure|&#10;        |**'upper left'**|**2**|左上角|Axes / Figure|&#10;        |**'lower left'**|**3**|左下角|Axes / Figure|&#10;        |**'lower right'**|**4**|右下角|Axes / Figure|&#10;        |**'center left'**|**6**|左侧正中|Axes / Figure|&#10;        |**'right' / 'center right'**|**5 / 7**|右侧正中|Axes / Figure|&#10;        |**'lower center'**|**8**|下方正中|Axes / Figure|&#10;        |**'upper center'**|**9**|上方正中|Axes / Figure|&#10;        |**'center'**|**10**|正中|Axes / Figure|&#10;        |**'outside upper left'**|/|Axes外的上方左侧|Figure(layout='constraind')|&#10;        |**'outside left upper'**|/|Axes外的左侧上方|Figure(layout='constraind')|&#10;        |**'outside upper right'**|/|Axes外的上方右侧|Figure(layout='constraind')|&#10;        |**'outside right upper'**|/|Axes外的右侧上方|Figure(layout='constraind')|&#10;        |**'outside lower left'**|/|Axes外的下方左侧|Figure(layout='constraind')|&#10;        |**'outside left lower'**|/|Axes外的左侧下方|Figure(layout='constraind')|&#10;        |**'outside lower right'**|/|Axes外的下方右侧|Figure(layout='constraind')|&#10;        |**'outside right lower'**|/|Axes外的右侧下方|Figure(layout='constraind')|&#10;        |**'outside upper center'**|/|Axes外的上方正中|Figure(layout='constraind')|&#10;        |**'outside lower center'**|/|Axes外的下方正中|Figure(layout='constraind')|&#10;&#10;    b. **(x, y)**：图例左下角在Axes或Figure中的坐标（此时忽略 **bbox_to_anchor参数**）&#10;&#10;2.  **bbox_to_anchor：**&#10;&#10;    a.  **(x, y)**：图例某个点（由loc参数指定）在Axes或Figure中的坐标&#10;&#10;    b.  **(x, y, width, height)**：在Axes或Figure中从(x, y)坐标创建一个宽width, 高height的bounding box用于放置图例&#10;&#10;3.  **bbox_transform**：&#10;&#10;    bbox_to_anchor参数参考的坐标系。默认情况下，与调用情况有关，`Axes.legend()`则参考Axes坐标系(`Axes.transAxes`)，`Figure.legend()`则采用Figure坐标系(`Figure.transFigure`)。&#10;&#10;    !!! note&#10;        **Axes或Figure坐标系** 指从(0, 0)到(1, 1)，即 **左下角为(0, 0)，右上角为(1, 1)**&#10;&#10;### loc=''：图例位置&#10;&#10;=== &quot;Axes下方正中&quot;&#10;&#10;    ```Python  title=&quot;Axes下方正中&quot; linenums=&quot;1&quot; hl_lines=&quot;8&quot;&#10;    fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;    ax = fig.add_subplot(1, 1, 1)&#10;   &#10;    l1 = ax.plot(x, y1, label='y=sin(x)', marker='o')&#10;    l2 = ax.plot(x, y2, label='y=x+2', marker='o')&#10;    l3 = ax.scatter(x, y3, label='y=ln(x)', marker='o')&#10;   &#10;    ax.legend(loc='lower center')&#10;   &#10;    plt.show()&#10;    ```&#10;&#10;    ![img.png](../../../images/图例/img_4.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;=== &quot;Figure下方正中&quot;&#10;&#10;    ```Python  title=&quot;Figure下方正中&quot; linenums=&quot;1&quot; hl_lines=&quot;8&quot;&#10;    fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;    ax = fig.add_subplot(1, 1, 1)&#10;   &#10;    l1 = ax.plot(x, y1, label='y=sin(x)', marker='o')&#10;    l2 = ax.plot(x, y2, label='y=x+2', marker='o')&#10;    l3 = ax.scatter(x, y3, label='y=ln(x)', marker='o')&#10;   &#10;    fig.legend(loc='lower center')&#10;   &#10;    plt.show()&#10;    ```&#10;&#10;    ![img.png](../../../images/图例/img_5.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;=== &quot;Axes外上方左侧&quot;&#10;&#10;    ```Python  title=&quot;Axes外上方左侧&quot; linenums=&quot;1&quot; hl_lines=&quot;8&quot;&#10;    fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;    ax = fig.add_subplot(1, 1, 1)&#10;   &#10;    l1 = ax.plot(x, y1, label='y=sin(x)', marker='o')&#10;    l2 = ax.plot(x, y2, label='y=x+2', marker='o')&#10;    l3 = ax.scatter(x, y3, label='y=ln(x)', marker='o')&#10;   &#10;    fig.legend(loc='outside upper left')&#10;   &#10;    plt.show()&#10;    ```&#10;&#10;    ![img.png](../../../images/图例/img_6.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;=== &quot;Axes外左侧上方&quot;&#10;&#10;    ```Python  title=&quot;Axes外左侧上方&quot; linenums=&quot;1&quot; hl_lines=&quot;8&quot;&#10;    fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;    ax = fig.add_subplot(1, 1, 1) &#10;   &#10;    l1 = ax.plot(x, y1, label='y=sin(x)', marker='o')&#10;    l2 = ax.plot(x, y2, label='y=x+2', marker='o')&#10;    l3 = ax.scatter(x, y3, label='y=ln(x)', marker='o')&#10;   &#10;    fig.legend(loc='outside left upper')&#10;   &#10;    plt.show()&#10;    ```&#10;&#10;    ![img.png](../../../images/图例/img_7.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;### loc=(x, y)：图例左下角坐标&#10;&#10;=== &quot;Axes&quot;&#10;&#10;    ```Python  title=&quot;Axes&quot; linenums=&quot;1&quot; hl_lines=&quot;8&quot;&#10;    fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;    ax = fig.add_subplot(1, 1, 1)&#10;   &#10;    l1 = ax.plot(x, y1, label='y=sin(x)', marker='o')&#10;    l2 = ax.plot(x, y2, label='y=x+2', marker='o')&#10;    l3 = ax.scatter(x, y3, label='y=ln(x)', marker='o')&#10;&#10;    ax.legend(loc=(0, 0))    # (1)!&#10;   &#10;    plt.show()&#10;    ```&#10;&#10;    1. 图例左下角在Axes中的坐标为(0, 0)&#10;&#10;    ![img.png](../../../images/图例/img_8.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;=== &quot;Figure&quot;&#10;&#10;    ```Python  title=&quot;Figure&quot; linenums=&quot;1&quot; hl_lines=&quot;8&quot;&#10;    fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;    ax = fig.add_subplot(1, 1, 1)&#10;   &#10;    l1 = ax.plot(x, y1, label='y=sin(x)', marker='o')&#10;    l2 = ax.plot(x, y2, label='y=x+2', marker='o')&#10;    l3 = ax.scatter(x, y3, label='y=ln(x)', marker='o')&#10;&#10;    fig.legend(loc=(0, 0))    # (1)!&#10;   &#10;    plt.show()&#10;    ```&#10;&#10;    1. 图例左下角在Figure中的坐标为(0, 0)&#10;&#10;    ![img.png](../../../images/图例/img_9.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;### loc='', bbox_to_anchor=(x, y)：图例定点坐标&#10;&#10;=== &quot;Axes&quot;&#10;&#10;    ```Python  title=&quot;Axes&quot; linenums=&quot;1&quot; hl_lines=&quot;8-11&quot;&#10;    fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;    ax = fig.add_subplot(1, 1, 1)&#10;&#10;    l1 = ax.plot(x, y1, label='y=sin(x)', marker='o')&#10;    l2 = ax.plot(x, y2, label='y=x+2', marker='o')&#10;    l3 = ax.scatter(x, y3, label='y=ln(x)', marker='o')&#10;&#10;    # 图例中心在Axes中的坐标为(0, 0.5)&#10;    ax.legend(loc=&quot;center&quot;,&#10;              bbox_to_anchor=(0, 0.5), &#10;              bbox_transform=ax.transAxes)&#10;&#10;    plt.show()&#10;    ```&#10;&#10;    ![img.png](../../../images/图例/img_10.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;=== &quot;Figure&quot;&#10;&#10;    ```Python  title=&quot;Figure&quot; linenums=&quot;1&quot; hl_lines=&quot;8-11&quot;&#10;    fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;    ax = fig.add_subplot(1, 1, 1)&#10;&#10;    l1 = ax.plot(x, y1, label='y=sin(x)', marker='o')&#10;    l2 = ax.plot(x, y2, label='y=x+2', marker='o')&#10;    l3 = ax.scatter(x, y3, label='y=ln(x)', marker='o')&#10;&#10;    # 图例中心在Figure中的坐标为(0, 0.5)&#10;    fig.legend(loc=&quot;center&quot;,&#10;               bbox_to_anchor=(0, 0.5),&#10;               bbox_transform=fig.transFigure)&#10;&#10;    plt.show()&#10;    ```&#10;&#10;    ![img.png](../../../images/图例/img_11.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;### loc='', bbox_to_anchor=(x, y, width, height)：图例在bounding box中位置&#10;&#10;=== &quot;Axes&quot;&#10;&#10;    ```Python  title=&quot;Axes&quot; linenums=&quot;1&quot; hl_lines=&quot;8-11&quot;&#10;    fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;    ax = fig.add_subplot(1, 1, 1)&#10;&#10;    l1 = ax.plot(x, y1, label='y=sin(x)', marker='o')&#10;    l2 = ax.plot(x, y2, label='y=x+2', marker='o')&#10;    l3 = ax.scatter(x, y3, label='y=ln(x)', marker='o')&#10;&#10;    # 在Axes中从(0, 0.5)创建一个宽1高0.5的bounding box，图例位于其正中&#10;    ax.legend(loc=&quot;center&quot;,&#10;              bbox_to_anchor=(0, 0.5, 1, 0.5), &#10;              bbox_transform=ax.transAxes)&#10;&#10;    plt.show()&#10;    ```&#10;    &#10;    ![img.png](../../../images/图例/img_12.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;=== &quot;Figure&quot;&#10;&#10;    ```Python  title=&quot;Figure&quot; linenums=&quot;1&quot; hl_lines=&quot;8-11&quot;&#10;    fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;    ax = fig.add_subplot(1, 1, 1)&#10;&#10;    l1 = ax.plot(x, y1, label='y=sin(x)', marker='o')&#10;    l2 = ax.plot(x, y2, label='y=x+2', marker='o')&#10;    l3 = ax.scatter(x, y3, label='y=ln(x)', marker='o')&#10;&#10;    # 在Figure中从(0, 0.5)创建一个宽1高0.5的bounding box，图例位于其正中&#10;    fig.legend(loc=&quot;center&quot;,&#10;               bbox_to_anchor=(0, 0.5, 1, 0.5),&#10;               bbox_transform=fig.transFigure)&#10;&#10;    plt.show()&#10;    ```&#10;&#10;    ![img.png](../../../images/图例/img_13.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;## 其它参数&#10;&#10;[Understand layout in matplotlib legend - legendkit 0.3.5 documentation](https://legendkit.readthedocs.io/en/latest/tutorial/matplotlib_legend.html)&#10;&#10;![img.png](../../../images/图例/img_19.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;![img.png](../../../images/图例/img_20.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;=== &quot;其它参数&quot;&#10;&#10;    ```Python  title=&quot;其它参数&quot; linenums=&quot;1&quot;&#10;    legend(&#10;           ################### 标签文本 ####################&#10;           prop={&quot;family&quot;: [&quot;sans-serif&quot;],           # (1)!&#10;                 &quot;style&quot;: &quot;italic&quot;,                  # (2)!&#10;                 &quot;variant&quot;: &quot;normal&quot;,                # (3)!&#10;                 &quot;stretch&quot;: &quot;normal&quot;,                # (4)!&#10;                 &quot;weight&quot;: &quot;extra bold&quot;,             # (5)!&#10;                 &quot;size&quot;: 20.0,                       # (6)!&#10;                 &quot;math_fontfamily&quot;: 'dejavusans',    # (7)!&#10;                 &quot;fname&quot;: None                       # (8)!&#10;                 },&#10;           # fontsize=20.0,                          (9)&#10;           labelcolor=&quot;linecolor&quot;,                   # (10)!&#10;      &#10;           ################### 图例标题 #####################&#10;           title=&quot;Legend&quot;,                           # (11)!&#10;           title_fontproperties={&quot;size&quot;: 20.0,&#10;                                 &quot;weight&quot;: &quot;extra bold&quot;&#10;                                 },&#10;           # title_fontsize=20.0,                    (12)&#10;           alignment=&quot;center&quot;,                       # (13)!&#10;    &#10;           ################### 图例项目 ######################&#10;           ncols=2,                                  # (14)!&#10;           columnspacing=1,                          # (15)!&#10;           labelspacing=0.5,                         # (16)!&#10;           numpoints=3,                              # (17)!&#10;           scatterpoints=3,                          # (18)!&#10;           scatteryoffsets=[0, 0.5, 1],              # (19)!&#10;           markerscale=0.5,                          # (20)!&#10;           markerfirst=False,                        # (21)!&#10;           reverse=True,                             # (22)!&#10;           handlelength=2,                           # (23)!&#10;           handleheight=1,                           # (24)!&#10;           handletextpad=0.5,                        # (25)!&#10;    &#10;           ################### 图例背景框 ####################&#10;           frameon=True,                             # (26)!&#10;           framealpha=0.5,                           # (27)!&#10;           facecolor=&quot;blue&quot;,                         # (28)!&#10;           edgecolor=&quot;yellow&quot;,                       # (29)!&#10;           fancybox=True,                            # (30)!&#10;           borderpad=0.3,                            # (31)!&#10;           borderaxespad=0.2,                        # (32)!&#10;           &#10;           # Patch参数：rcParams[&quot;legend.shadow&quot;]=False&#10;           shadow={&quot;linestyle&quot;: &quot;--&quot;,                # (33)!&#10;                   &quot;linewidth&quot;: 5,                   # (34)!&#10;                   &quot;facecolor&quot;: &quot;red&quot;,               # (35)!&#10;                   &quot;edgecolor&quot;: &quot;green&quot;              # (36)!&#10;                   },&#10;    &#10;           ################### 其它参数 #####################&#10;           mode=None,                                # (37)!&#10;           handler_map=None,                         # (38)!&#10;           draggable=False                           # (39)!&#10;           )&#10;    ```&#10;&#10;    1.  按优先级降序排列的字体系列列表rcParams[&quot;font.family&quot;], 可选(设备支持的字体):&#10;        a.  'sans-serif'(默认)&#10;        b.  'serif'&#10;        c.  'cursive'&#10;        d.  'fantasy'&#10;        e.  'monospace'等&#10;    2.  字体样式rcParams[&quot;font.style&quot;], 可选:&#10;        a.  'normal'(默认，罗马体)&#10;        b.  'italic'(斜体)&#10;        c.  'oblique'(倾斜)&#10;    3.  字体变体rcParams[&quot;font.variant&quot;], 可选:&#10;        a.  'normal'(默认)&#10;        b.  'small-caps'&#10;    4.  字体伸展与压缩rcParams[&quot;font.stretch&quot;], 可选:&#10;        a.  0~1000&#10;        b.  'ultra-condensed'&#10;        c.  'extra-condensed'&#10;        d.  'condensed'&#10;        e.  'semi-condensed'&#10;        f.  'normal'(默认)&#10;        g.  'semi-expanded'&#10;        h.  'expanded'&#10;        i.  'extra-expanded'&#10;        j.  'ultra-expanded' &#10;    5.  字体粗细rcParams[&quot;font.weight&quot;], 可选:&#10;        a.  0~1000&#10;        b.  'ultralight'&#10;        c.  'light'&#10;        d.  'normal'(默认)&#10;        e.  'regular'&#10;        f.  'book'&#10;        g.  'medium'&#10;        h.  'roman'&#10;        i.  'semibold'&#10;        j.  'demibold'&#10;        k.  'demi'&#10;        l.  'bold'&#10;        m.  'heavy'&#10;        n.  'extra bold'&#10;        o.  'black'&#10;    6.  字体大小rcParams[&quot;font.size&quot;], 可选: &#10;        &#10;        绝对大小(浮点数，默认10.0) 或 相对大小&#10;&#10;        a.  'xx-small'&#10;        b.  'x-small'&#10;        c.  'small'&#10;        d.  'medium'&#10;        e.  'large'&#10;        f.  'x-large'&#10;        g.  'xx-large'&#10;    7.  用于呈现数学文本的字体rcParams[&quot;mathtext.fontset&quot;], 可选: &#10;        a.  'dejavusans'(默认)&#10;        b.  'dejavuserif'&#10;        c.  'cm'&#10;        d.  'stix'&#10;        e.  'stixsans'&#10;        f.  'custom'&#10;    8.  字体文件路径&#10;    9.  字体大小： 仅当prop未指定时被使用&#10;    10.  字体颜色rcParams[&quot;legend.labelcolor&quot;]，默认None(rcParams[&quot;text.color&quot;]=&quot;black&quot;), 可选: &#10;&#10;         颜色字符串、颜色字符串列表或者与线条/标记点颜色一致&#10;&#10;         a.  'linecolor'&#10;         b.  'markerfacecolor'/'mfc'&#10;         c.  'markeredgecolor'/'mec'&#10;    11.  标题，默认None&#10;    12.  默认rcParams[&quot;legend.title_fontsize&quot;]=None, 不能与title_fontproperties同时指定&#10;    13.  图例标题及图例项目的对齐方式, 可选: &#10;         a.  'center'(默认)&#10;         b.  'left'&#10;         c.  'right'&#10;    14.  图例项目列数，默认为1&#10;    15.  图例项目列间距（相对于字体大小），默认rcParams[&quot;legend.columnspacing&quot;]=2&#10;    16.  图例项目间的垂直距离（相对于字体大小），默认rcParams[&quot;legend.labelspacing&quot;]=0.5&#10;    17.  线形图图例项目图形中标记点数量，默认rcParams[&quot;legend.numpoints&quot;]=1&#10;    18.  散点图图例项目图形中标记点数量，默认rcParams[&quot;legend.scatterpoints&quot;]=1&#10;    19.  散点图图例项目图形中每个标记点相对于其标签文本的垂直相对偏移量，默认为[0.375, 0.5, 0.3125]&#10;         a.  0表示文本底部&#10;         b.  1表示文本顶部&#10;    20.  图例项目图形标记点缩放，默认rcParams[&quot;legend.markerscale&quot;]=1&#10;    21.  图例项目图形是否在文本标签前面，默认True&#10;    22.  是否逆转图例项目顺序，默认False&#10;    23.  图例项目图形长度（相对于字体大小），默认rcParams[&quot;legend.handlelength&quot;]=2&#10;    24.  图例项目图形高度（相对于字体大小），默认rcParams[&quot;legend.handleheight&quot;]=0.7&#10;    25.  图例项目图形与标签文本之间的距离（相对于字体大小），默认rcParams[&quot;legend.handletextpad&quot;]=0.8&#10;    26.  是否绘制背景框，默认rcParams[&quot;legend.frameon&quot;]=True&#10;    27.  背景框透明度，默认rcParams[&quot;legend.framealpha&quot;]=0.8&#10;    28.  背景框填充色，默认rcParams[&quot;legend.facecolor&quot;]=&quot;inherit&quot;(即继承rcParams[&quot;axes.facecolor&quot;]=&quot;white&quot;)&#10;    29.  背景框边缘色，默认rcParams[&quot;legend.edgecolor&quot;]=0.8, &#10;&#10;         若为&quot;inherit&quot;则继承rcParams[&quot;axes.edgecolor&quot;]=&quot;black&quot;&#10;    30.  背景框是否启用圆角，默认rcParams[&quot;legend.fancybox&quot;]=True&#10;    31.  边框与内部的距离（相对于字体大小），默认rcParams[&quot;legend.borderpad&quot;]=0.4&#10;    32.  边框与Axes的距离（相对于字体大小），默认rcParams[&quot;legend.borderaxespad&quot;]=0.5&#10;    33.  阴影线样式&#10;    34.  阴影线宽度&#10;    35.  阴影填充色&#10;    36.  阴影边缘色&#10;    37.  可选&quot;expand&quot;（水平扩展到填充整个轴或bbox）, None&#10;    38.  通过字典映射单独设置每一个图例项目&#10;    39.  图例能否被鼠标拖动，默认False&#10;&#10;    ![img.png](../../../images/图例/img_14.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;=== &quot;可用字体&quot;&#10;&#10;    ```Python  title=&quot;可用字体&quot; linenums=&quot;1&quot;&#10;    import matplotlib.font_manager&#10;    matplotlib.font_manager.get_font_names()&#10;    &quot;&quot;&quot;&#10;    ['Monotype Corsiva', 'Goudy Stout', 'Lucida Sans Unicode', 'HoloLens MDL2 Assets', 'Eras Light ITC', &#10;     'Tempus Sans ITC', 'Sylfaen', 'Lucida Console', 'Verdana', 'cmb10', &#10;     'STZhongsong', 'Segoe Fluent Icons', 'Lucida Handwriting', 'Microsoft PhagsPa', &#10;     'Eras Bold ITC', 'DFKai-SB', 'Papyrus', 'DejaVu Sans Mono', 'Harrington', &#10;     'Times New Roman', 'STLiti', 'Mistral', 'cmsy10', 'Leelawadee', &#10;     'Niagara Engraved', 'Colonna MT', 'Microsoft New Tai Lue', 'STIXSizeTwoSym', &#10;     'Edwardian Script ITC', 'FZYaoTi', 'Script MT Bold', 'MingLiU-ExtB', 'Segoe UI Historic', &#10;     'Microsoft Himalaya', 'Trebuchet MS', 'cmtt10', 'Vladimir Script', &#10;     'Rage Italic', 'STXinwei', 'Segoe UI Variable', 'Modern No. 20', 'FZShuTi', &#10;     'French Script MT', 'Copperplate Gothic Light', 'Nirmala UI', 'Gloucester MT Extra Condensed', 'Segoe UI', &#10;     'Book Antiqua', 'Microsoft YaHei', 'MS Reference Sans Serif', 'Lucida Sans', 'Engravers MT', &#10;     'DengXian', 'STXingkai', 'Javanese Text', 'High Tower Text', 'SimSun-ExtB', &#10;     'Chiller', 'HarmonyOS Sans SC', 'Playbill', 'Bookman Old Style', 'MS Gothic', &#10;     'Castellar', 'SimHei', 'Kunstler Script', 'Yu Gothic', 'FangSong', &#10;     'Brush Script MT', 'Sans Serif Collection', 'Tahoma', 'Courier New', 'Myanmar Text', &#10;     'Bradley Hand ITC', 'Bell MT', 'Gill Sans MT Ext Condensed Bold', 'STIXNonUnicode', 'Leelawadee UI', &#10;     'Franklin Gothic Heavy', 'Calibri', 'STIXSizeThreeSym', 'Microsoft Uighur', 'Maiandra GD', &#10;     'STIXGeneral', 'Segoe UI Symbol', 'Lucida Fax', 'Dubai', 'Century Gothic', &#10;     'Tw Cen MT', 'Pristina', 'Viner Hand ITC', 'Rockwell Extra Bold', 'Gill Sans Ultra Bold', &#10;     'HYZhongHei', 'Stencil', 'Parchment', 'Gadugi', 'DejaVu Sans', &#10;     'Juice ITC', 'Baskerville Old Face', 'Vivaldi', 'Niagara Solid', 'Garamond', &#10;     'Calisto MT', 'DejaVu Serif Display', 'Segoe MDL2 Assets', 'STFangsong', 'Candara', &#10;     'Curlz MT', 'Ink Free', 'STIXSizeOneSym', 'Rockwell', 'Bahnschrift', &#10;     'Lucida Sans Typewriter', 'Perpetua', 'Gill Sans MT', 'Gabriola', 'Sitka', &#10;     'STKaiti', 'STHupo', 'Centaur', 'Arial', 'Eras Demi ITC', &#10;     'Bodoni MT', 'Kristen ITC', 'MS Outlook', 'Lucida Bright', 'Century', &#10;     'Wide Latin', 'DejaVu Sans Display', 'SimSun-ExtG', 'Consolas', 'Arial Rounded MT Bold', &#10;     'cmr10', 'Eras Medium ITC', 'Palace Script MT', 'Broadway', 'Jokerman', &#10;     'DejaVu Serif', 'Agency FB', 'Constantia', 'Symbol', 'cmss10', &#10;     'Franklin Gothic Medium Cond', 'Informal Roman', 'STIXSizeFiveSym', 'Bauhaus 93', 'Footlight MT Light', &#10;     'Microsoft Sans Serif', 'Segoe Print', 'Comic Sans MS', 'Blackadder ITC', 'Microsoft Yi Baiti', &#10;     'Gigi', 'Lucida Calligraphy', 'Corbel', 'Magneto', 'LiSu', &#10;     'Elephant', 'Tw Cen MT Condensed', 'OCR A Extended', 'Snap ITC', 'Franklin Gothic Demi', &#10;     'Britannic Bold', 'Berlin Sans FB', 'Bookshelf Symbol 7', 'Wingdings', 'MS Reference Specialty', &#10;     'Berlin Sans FB Demi', 'Mongolian Baiti', 'STCaiyun', 'Onyx', 'Malgun Gothic', &#10;     'Harlow Solid Italic', 'Palatino Linotype', 'Goudy Old Style', 'STXihei', 'STSong', &#10;     'Cooper Black', 'Segoe Script', 'Wingdings 2', 'Georgia', 'MingLiU', 'cmmi10', 'cmex10', 'Webdings', &#10;     'Algerian', 'Freestyle Script', 'Gill Sans MT Condensed', 'Copperplate Gothic Bold', 'SimSun', &#10;     'Gill Sans Ultra Bold Condensed', 'Felix Titling', 'MV Boli', 'Old English Text MT', 'Rockwell Condensed', &#10;     'STIXSizeFourSym', 'Cambria', 'Segoe UI Emoji', 'Microsoft JhengHei', 'KaiTi', 'Ravie', &#10;     'Ebrima', 'Franklin Gothic Book', 'Haettenschweiler', 'Bernard MT Condensed', 'Impact', &#10;     'Tw Cen MT Condensed Extra Bold', 'Californian FB', 'Showcard Gothic', 'YouYuan', 'Microsoft Tai Le', &#10;     'Forte', 'Imprint MT Shadow', 'Wingdings 3', 'Century Schoolbook', 'Perpetua Titling MT', 'Poor Richard', &#10;     'FZXiaoBiaoSong-B05S', 'Matura MT Script Capitals', 'Franklin Gothic Demi Cond', 'Franklin Gothic Medium']&#10;    &quot;&quot;&quot;&#10;    ```&#10;&#10;## 添加多个Legend&#10;&#10;```Python  title=&quot;添加多个Legend&quot; linenums=&quot;1&quot;&#10;fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;ax = fig.add_subplot(1, 1, 1)&#10;&#10;l1 = ax.plot(x, y1, label='y=sin(x)', marker='o')&#10;l2 = ax.plot(x, y2, label='y=x+2', marker='o')&#10;l3 = ax.scatter(x, y3, label='y=ln(x)', marker='o')&#10;&#10;# 第一个&#10;legend1 = ax.legend(handles=[l1[0]], loc='lower center')&#10;ax.add_artist(legend1)&#10;# 第二个&#10;legend2 = ax.legend(handles=[l2[0]], loc=(0.5, 0.6))&#10;ax.add_artist(legend2)&#10;# 第三个&#10;legend3 = ax.legend(handles=[l3], loc=(0.8, 0.3))&#10;ax.add_artist(legend3)&#10;&#10;plt.show()&#10;```&#10;&#10;![img.png](../../../images/图例/img_15.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;## 添加自定义图例&#10;&#10;=== &quot;线型/标记图例&quot;&#10;&#10;    ```Python  title=&quot;线型/标记图例&quot; linenums=&quot;1&quot;&#10;    from matplotlib.lines import Line2D&#10;&#10;    fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;    ax = fig.add_subplot(1, 1, 1)&#10;&#10;    line = Line2D(xdata=[], ydata=[],&#10;                  linestyle=&quot;--&quot;,&#10;                  color=&quot;red&quot;,&#10;                  marker=&quot;o&quot;,&#10;                  markerfacecolor=&quot;red&quot;,&#10;                  label=&quot;line/marker&quot;)&#10;    ax.legend(handles=[line],&#10;              fontsize=20)&#10;&#10;    plt.show()&#10;    ```&#10;&#10;    ![img.png](../../../images/图例/img_16.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;=== &quot;颜色图例&quot;&#10;&#10;    ```Python  title=&quot;颜色图例&quot; linenums=&quot;1&quot;&#10;    from matplotlib.patches import Patch&#10;&#10;    fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;    ax = fig.add_subplot(1, 1, 1)&#10;&#10;    patch = Patch(facecolor=&quot;green&quot;,&#10;                  linestyle=&quot;--&quot;,&#10;                  linewidth=2,&#10;                  edgecolor=&quot;yellow&quot;,&#10;                  hatch=&quot;/&quot;,&#10;                  hatch_linewidth=10,&#10;                  label=&quot;Patch&quot;)&#10;    ax.legend(handles=[patch],&#10;              fontsize=20)&#10;&#10;    plt.show()&#10;    ```&#10;&#10;    ![img.png](../../../images/图例/img_17.png){ width=&quot;50%&quot; align=&quot;center&quot;}&#10;&#10;## 获取可用handles与labels&#10;&#10;```Python  title=&quot;获取可用handles与labels&quot; linenums=&quot;1&quot;&#10;handles, labels = ax.get_legend_handles_labels()&#10;&quot;&quot;&quot;&#10;handles: [&lt;matplotlib.lines.Line2D object at 0x000001A2F557C140&gt;, &lt;matplotlib.lines.Line2D object at 0x000001A2F557C3E0&gt;, &lt;matplotlib.collections.PathCollection object at 0x000001A2F530F710&gt;]&#10;labels: ['y=sin(x)', 'y=x+2', 'y=ln(x)']&#10;&quot;&quot;&quot;&#10;```&#10;&#10;## seaborn中的move_legend函数&#10;&#10;[seaborn.move_legend — seaborn 0.13.2 documentation](https://seaborn.pydata.org/generated/seaborn.move_legend.html)&#10;&#10;重新创建一个图例到新的位置。该名称略有误称。Matplotlib 图例不公开其位置参数的控制。因此，此函数 **创建一个新的图例，复制原始对象中的数据，然后删除该对象**。&#10;&#10;`sns.move_legend(obj, loc, **kwargs)`&#10;&#10;1.  **obj**：此参数可以是 seaborn 或 matplotlib 对象。&#10;&#10;    a.  `seaborn.FacetGrid` 或 `seaborn.PairGrid`&#10;&#10;    b.  `matplotlib.axes.Axes` 或 `matplotlib.figure.Figure`&#10;&#10;2.  **loc**：位置参数，同 `matplotlib.axes.Axes.legend()`。&#10;&#10;`**kwargs` 其他参数传递给 `matplotlib.axes.Axes.legend()` 。&#10;&#10;```Python title=&quot;move_legend函数&quot; linenums=&quot;1&quot;&#10;fig = plt.figure(figsize=(8, 8), dpi=100, layout=&quot;constrained&quot;)&#10;ax = fig.add_subplot(1, 1, 1)&#10;&#10;l1 = ax.plot(x, y1, label='y=sin(x)', marker='o')&#10;l2 = ax.plot(x, y2, label='y=x+2', marker='o')&#10;l3 = ax.scatter(x, y3, label='y=ln(x)', marker='o')&#10;&#10;ax.legend()&#10;&#10;sns.move_legend(ax, loc=&quot;center&quot;, bbox_to_anchor=(0, 0.5))&#10;&#10;plt.show()&#10;```&#10;&#10;![img.png](../../../images/图例/img_18.png){ width=&quot;50%&quot; align=&quot;center&quot;}" />
+                    </map>
+                  </option>
+                  <option name="messageId" value="019713002d42733390bc1ff286bb1c1a" />
+                  <option name="question" value="&#10;```&#10;Ivxe uzrofiv: Xlmmvxgrlm dzh ivhvg&#10;```" />
+                  <option name="rating" value="UNRATED" />
+                  <option name="referenceBeans">
+                    <list />
+                  </option>
+                  <option name="status" value="SUCCESS" />
+                  <option name="variables">
+                    <list />
+                  </option>
+                </Turn>
+              </list>
+            </option>
+            <option name="updateTime" value="1748370491967" />
           </Conversation>
         </option>
       </WebConversation>
