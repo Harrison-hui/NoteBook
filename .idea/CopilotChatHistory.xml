@@ -4,6 +4,12 @@
     <option name="conversations">
       <list>
         <Conversation>
+          <option name="createTime" value="1748369907932" />
+          <option name="id" value="019712f7a0dc7e29a1a916c91edc7797" />
+          <option name="title" value="新对话 2025年5月28日 02:18:27" />
+          <option name="updateTime" value="1748369907932" />
+        </Conversation>
+        <Conversation>
           <option name="createTime" value="1748311663074" />
           <option name="id" value="01970f7ee6e4788981316c3bae922116" />
           <option name="title" value="生成markdown可渲染的html表格，支持可手动添加行和列，可手动选择单元格合并，单元格可手动拉伸调整长度和宽度，过长是可拉动滚动条" />
