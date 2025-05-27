@@ -3117,6 +3117,467 @@
                   <option name="role" value="assistant" />
                   <option name="topic" value="" />
                 </UIChatMessage>
+                <UIChatMessage>
+                  <option name="command" value="" />
+                  <option name="content" value="github中tree/main与raw/master的区别，怎么设置的" />
+                  <option name="cost" value="0" />
+                  <option name="createdAt" value="1748371066821" />
+                  <option name="localReferences">
+                    <list>
+                      <LocalReferences>
+                        <option name="isRequestStage" value="true" />
+                        <option name="range">
+                          <RefRange />
+                        </option>
+                        <option name="uri" value="{&quot;path&quot;:&quot;file:///D:/OneDrive/文档/8.Py_Project/Learning/NoteBook/mkdocs.yml&quot;}" />
+                      </LocalReferences>
+                    </list>
+                  </option>
+                  <option name="parser">
+                    <SimpleMarkdownStreamParser>
+                      <option name="content" value="github中tree/main与raw/master的区别，怎么设置的" />
+                      <option name="nodes">
+                        <list>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="github中tree/main与raw/master的区别，怎么设置的" />
+                            <option name="contentId" value="404213900" />
+                            <option name="settled" value="false" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                        </list>
+                      </option>
+                      <option name="parserState">
+                        <ParserState>
+                          <option name="column" value="35" />
+                          <option name="offset" value="36" />
+                          <option name="moveCursor" value="true" />
+                        </ParserState>
+                      </option>
+                    </SimpleMarkdownStreamParser>
+                  </option>
+                  <option name="role" value="user" />
+                  <option name="selectedRanges">
+                    <list />
+                  </option>
+                  <option name="uri" value="" />
+                  <option name="variables">
+                    <list />
+                  </option>
+                </UIChatMessage>
+                <UIChatMessage>
+                  <option name="actions">
+                    <list />
+                  </option>
+                  <option name="codebaseReferences">
+                    <list />
+                  </option>
+                  <option name="codebaseStatus" value="init" />
+                  <option name="command" value="" />
+                  <option name="content" value="在GitHub中，`tree/main`与`raw/master`的主要区别在于它们展示的内容和用途：&#10;&#10;1. **tree/main**:&#10;   - **展示内容**: `tree/main`展示的是仓库中文件的目录结构。当你点击`tree/main`时，你可以看到仓库中所有文件的列表及其子目录的结构。&#10;   - **用途**: 适用于查看项目的文件和目录结构，便于导航和管理项目。&#10;&#10;2. **raw/master**:&#10;   - **展示内容**: `raw/master`展示的是仓库中某个文件的原始内容。当你点击`raw/master`时，你可以直接查看文件的实际内容，通常用于查看或下载文件内容。&#10;   - **用途**: 适用于直接查看或下载文件内容，尤其是当你需要文件的原始文本时。&#10;&#10;### 如何设置&#10;&#10;- **设置默认分支**:&#10;  - GitHub在2020年10月1日起，将新创建的仓库的默认分支名称从`master`更改为`main`。对于已有的仓库，默认分支仍然是`master`，但建议将其更名为`main`以符合最新的命名规范。&#10;&#10;- **更改分支名称**:&#10;  - 如果你需要将现有仓库的分支名称从`master`更改为`main`，可以使用以下Git命令：&#10;    1. 打开终端并进入你的Git仓库目录。&#10;    2. 输入以下命令将主分支名称从`master`更改为`main`：&#10;       ```bash&#10;       git branch -m master main&#10;       ```&#10;    3. 如果你的仓库存在远程仓库，则需要同步更新远程仓库中的分支名称：&#10;       ```bash&#10;       git push -u origin main&#10;       ```&#10;&#10;通过以上步骤，你可以轻松地在GitHub上查看和管理`tree/main`与`raw/master`，并根据需要进行调整。" />
+                  <option name="cost" value="22695" />
+                  <option name="createdAt" value="1748371089530" />
+                  <option name="followup">
+                    <list />
+                  </option>
+                  <option name="id" value="019713094fc5733390bc265d0d15b86c" />
+                  <option name="knowledgeReferences">
+                    <list />
+                  </option>
+                  <option name="localReferences">
+                    <list>
+                      <LocalReferences>
+                        <option name="isRequestStage" value="true" />
+                        <option name="range">
+                          <RefRange />
+                        </option>
+                        <option name="uri" value="{&quot;path&quot;:&quot;file:///D:/OneDrive/文档/8.Py_Project/Learning/NoteBook/mkdocs.yml&quot;}" />
+                      </LocalReferences>
+                    </list>
+                  </option>
+                  <option name="parser">
+                    <SimpleMarkdownStreamParser>
+                      <option name="columns">
+                        <list>
+                          <option value="50" />
+                          <option value="-1" />
+                          <option value="16" />
+                          <option value="81" />
+                          <option value="38" />
+                          <option value="-1" />
+                          <option value="17" />
+                          <option value="90" />
+                          <option value="43" />
+                          <option value="-1" />
+                          <option value="7" />
+                          <option value="-1" />
+                          <option value="12" />
+                          <option value="104" />
+                          <option value="-1" />
+                          <option value="12" />
+                          <option value="49" />
+                          <option value="23" />
+                          <option value="37" />
+                          <option value="13" />
+                          <option value="31" />
+                          <option value="9" />
+                          <option value="37" />
+                          <option value="13" />
+                          <option value="29" />
+                          <option value="9" />
+                          <option value="-1" />
+                          <option value="60" />
+                        </list>
+                      </option>
+                      <option name="content" value="在GitHub中，`tree/main`与`raw/master`的主要区别在于它们展示的内容和用途：&#10;&#10;1. **tree/main**:&#10;   - **展示内容**: `tree/main`展示的是仓库中文件的目录结构。当你点击`tree/main`时，你可以看到仓库中所有文件的列表及其子目录的结构。&#10;   - **用途**: 适用于查看项目的文件和目录结构，便于导航和管理项目。&#10;&#10;2. **raw/master**:&#10;   - **展示内容**: `raw/master`展示的是仓库中某个文件的原始内容。当你点击`raw/master`时，你可以直接查看文件的实际内容，通常用于查看或下载文件内容。&#10;   - **用途**: 适用于直接查看或下载文件内容，尤其是当你需要文件的原始文本时。&#10;&#10;### 如何设置&#10;&#10;- **设置默认分支**:&#10;  - GitHub在2020年10月1日起，将新创建的仓库的默认分支名称从`master`更改为`main`。对于已有的仓库，默认分支仍然是`master`，但建议将其更名为`main`以符合最新的命名规范。&#10;&#10;- **更改分支名称**:&#10;  - 如果你需要将现有仓库的分支名称从`master`更改为`main`，可以使用以下Git命令：&#10;    1. 打开终端并进入你的Git仓库目录。&#10;    2. 输入以下命令将主分支名称从`master`更改为`main`：&#10;       ```bash&#10;       git branch -m master main&#10;       ```&#10;    3. 如果你的仓库存在远程仓库，则需要同步更新远程仓库中的分支名称：&#10;       ```bash&#10;       git push -u origin main&#10;       ```&#10;&#10;通过以上步骤，你可以轻松地在GitHub上查看和管理`tree/main`与`raw/master`，并根据需要进行调整。&#10;" />
+                      <option name="nodes">
+                        <list>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="在GitHub中，`tree/main`与`raw/master`的主要区别在于它们展示的内容和用途：" />
+                            <option name="contentId" value="2137402852" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="1. **tree/main**:" />
+                            <option name="contentId" value="1379373779" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="**展示内容**: `tree/main`展示的是仓库中文件的目录结构。当你点击`tree/main`时，你可以看到仓库中所有文件的列表及其子目录的结构。" />
+                            <option name="contentId" value="418006991" />
+                            <option name="indentSize" value="3" />
+                            <option name="settled" value="true" />
+                            <option name="startSymbol" value="-" />
+                            <option name="type" value="list-item" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="**用途**: 适用于查看项目的文件和目录结构，便于导航和管理项目。" />
+                            <option name="contentId" value="816905219" />
+                            <option name="indentSize" value="3" />
+                            <option name="settled" value="true" />
+                            <option name="startSymbol" value="-" />
+                            <option name="type" value="list-item" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="2. **raw/master**:" />
+                            <option name="contentId" value="514686221" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="**展示内容**: `raw/master`展示的是仓库中某个文件的原始内容。当你点击`raw/master`时，你可以直接查看文件的实际内容，通常用于查看或下载文件内容。" />
+                            <option name="contentId" value="-739464896" />
+                            <option name="indentSize" value="3" />
+                            <option name="settled" value="true" />
+                            <option name="startSymbol" value="-" />
+                            <option name="type" value="list-item" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="**用途**: 适用于直接查看或下载文件内容，尤其是当你需要文件的原始文本时。" />
+                            <option name="contentId" value="-1445032331" />
+                            <option name="indentSize" value="3" />
+                            <option name="settled" value="true" />
+                            <option name="startSymbol" value="-" />
+                            <option name="type" value="list-item" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value=" 如何设置" />
+                            <option name="contentId" value="732842211" />
+                            <option name="level" value="3" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="heading" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value=" **设置默认分支**:" />
+                            <option name="contentId" value="-1190987947" />
+                            <option name="indentSize" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="startSymbol" value="-" />
+                            <option name="type" value="list-item" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="GitHub在2020年10月1日起，将新创建的仓库的默认分支名称从`master`更改为`main`。对于已有的仓库，默认分支仍然是`master`，但建议将其更名为`main`以符合最新的命名规范。" />
+                            <option name="contentId" value="1881332293" />
+                            <option name="indentSize" value="2" />
+                            <option name="settled" value="true" />
+                            <option name="startSymbol" value="-" />
+                            <option name="type" value="list-item" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value=" **更改分支名称**:" />
+                            <option name="contentId" value="-2097637239" />
+                            <option name="indentSize" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="startSymbol" value="-" />
+                            <option name="type" value="list-item" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="如果你需要将现有仓库的分支名称从`master`更改为`main`，可以使用以下Git命令：" />
+                            <option name="contentId" value="-669843382" />
+                            <option name="indentSize" value="2" />
+                            <option name="settled" value="true" />
+                            <option name="startSymbol" value="-" />
+                            <option name="type" value="list-item" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="    1. 打开终端并进入你的Git仓库目录。" />
+                            <option name="contentId" value="528722294" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="    2. 输入以下命令将主分支名称从`master`更改为`main`：" />
+                            <option name="contentId" value="-1182609722" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="git branch -m master main&#10;" />
+                            <option name="contentId" value="-746996221" />
+                            <option name="expectEnding" value="       ```" />
+                            <option name="indentSize" value="7" />
+                            <option name="language" value="bash" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="code-block" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="    3. 如果你的仓库存在远程仓库，则需要同步更新远程仓库中的分支名称：" />
+                            <option name="contentId" value="-1110031997" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="git push -u origin main&#10;" />
+                            <option name="contentId" value="-603311689" />
+                            <option name="expectEnding" value="       ```" />
+                            <option name="indentSize" value="7" />
+                            <option name="language" value="bash" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="code-block" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="通过以上步骤，你可以轻松地在GitHub上查看和管理`tree/main`与`raw/master`，并根据需要进行调整。" />
+                            <option name="contentId" value="-1344165385" />
+                            <option name="settled" value="true" />
+                            <option name="type" value="line" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                          <MarkdownNode>
+                            <option name="children">
+                              <list />
+                            </option>
+                            <option name="content" value="" />
+                            <option name="contentId" value="0" />
+                            <option name="settled" value="false" />
+                            <option name="type" value="undetermined" />
+                            <option name="xmlData">
+                              <XmlNode />
+                            </option>
+                          </MarkdownNode>
+                        </list>
+                      </option>
+                      <option name="parserState">
+                        <ParserState>
+                          <option name="line" value="28" />
+                          <option name="column" value="-1" />
+                          <option name="offset" value="830" />
+                          <option name="moveCursor" value="true" />
+                        </ParserState>
+                      </option>
+                    </SimpleMarkdownStreamParser>
+                  </option>
+                  <option name="references">
+                    <list />
+                  </option>
+                  <option name="role" value="assistant" />
+                  <option name="topic" value="" />
+                </UIChatMessage>
               </list>
             </option>
             <option name="messagesV3">
@@ -3233,6 +3694,25 @@
                     <ChatMessageExtra />
                   </option>
                 </ChatMessageV3>
+                <ChatMessageV3>
+                  <option name="role" value="user" />
+                  <option name="content" value="github中tree/main与raw/master的区别，怎么设置的" />
+                  <option name="extra">
+                    <ChatMessageExtra>
+                      <option name="agent" value="default" />
+                      <option name="cmd" value="default" />
+                      <option name="code" value="# Kilqvxg rmulinzgrlm&#10;hrgv_mznv: YrlNvw MlgvYllp&#10;hrgv_fio: sggkh://Sziirhlm-sfr.trgsfy.rl/YrlNvw MlgvYllp/&#10;hrgv_zfgsli: Sziirhlm&#10;&#10;# Ivklhrglib&#10;ivkl_mznv: Sziirhlm-sfr/MlgvYllp&#10;ivkl_fio: sggkh://trgsfy.xln/Sziirhlm-sfr/MlgvYllp/&#10;&#10;# Xlkbirtsg&#10;xlkbirtsg: Xlkbirtsg &amp;xlkb; 7974 Sziirhlm 南京医科大学&#10;&#10;mze:&#10;  - Kbgslm基础:&#10;    - 计算机组成原理:&#10;" />
+                      <option name="path" value="D:\OneDrive\文档\8.Py_Project\Learning\NoteBook\mkdocs.yml" />
+                    </ChatMessageExtra>
+                  </option>
+                </ChatMessageV3>
+                <ChatMessageV3>
+                  <option name="role" value="assistant" />
+                  <option name="content" value="在GitHub中，`tree/main`与`raw/master`的主要区别在于它们展示的内容和用途：&#10;&#10;1. **tree/main**:&#10;   - **展示内容**: `tree/main`展示的是仓库中文件的目录结构。当你点击`tree/main`时，你可以看到仓库中所有文件的列表及其子目录的结构。&#10;   - **用途**: 适用于查看项目的文件和目录结构，便于导航和管理项目。&#10;&#10;2. **raw/master**:&#10;   - **展示内容**: `raw/master`展示的是仓库中某个文件的原始内容。当你点击`raw/master`时，你可以直接查看文件的实际内容，通常用于查看或下载文件内容。&#10;   - **用途**: 适用于直接查看或下载文件内容，尤其是当你需要文件的原始文本时。&#10;&#10;### 如何设置&#10;&#10;- **设置默认分支**:&#10;  - GitHub在2020年10月1日起，将新创建的仓库的默认分支名称从`master`更改为`main`。对于已有的仓库，默认分支仍然是`master`，但建议将其更名为`main`以符合最新的命名规范。&#10;&#10;- **更改分支名称**:&#10;  - 如果你需要将现有仓库的分支名称从`master`更改为`main`，可以使用以下Git命令：&#10;    1. 打开终端并进入你的Git仓库目录。&#10;    2. 输入以下命令将主分支名称从`master`更改为`main`：&#10;       ```bash&#10;       git branch -m master main&#10;       ```&#10;    3. 如果你的仓库存在远程仓库，则需要同步更新远程仓库中的分支名称：&#10;       ```bash&#10;       git push -u origin main&#10;       ```&#10;&#10;通过以上步骤，你可以轻松地在GitHub上查看和管理`tree/main`与`raw/master`，并根据需要进行调整。" />
+                  <option name="extra">
+                    <ChatMessageExtra />
+                  </option>
+                </ChatMessageV3>
               </list>
             </option>
             <option name="sessionId" value="01970f7ee6e4788981316c3bae922116" />
@@ -3272,9 +3752,55 @@
                     <list />
                   </option>
                 </Turn>
+                <Turn>
+                  <option name="agent" value="" />
+                  <option name="answer" value="在TrgSfy中，`givv/nzrm`与`izd/nzhgvi`的主要区别在于它们展示的内容和用途：&#10;&#10;8. **givv/nzrm**:&#10;   - **展示内容**: `givv/nzrm`展示的是仓库中文件的目录结构。当你点击`givv/nzrm`时，你可以看到仓库中所有文件的列表及其子目录的结构。&#10;   - **用途**: 适用于查看项目的文件和目录结构，便于导航和管理项目。&#10;&#10;7. **izd/nzhgvi**:&#10;   - **展示内容**: `izd/nzhgvi`展示的是仓库中某个文件的原始内容。当你点击`izd/nzhgvi`时，你可以直接查看文件的实际内容，通常用于查看或下载文件内容。&#10;   - **用途**: 适用于直接查看或下载文件内容，尤其是当你需要文件的原始文本时。&#10;&#10;### 如何设置&#10;&#10;- **设置默认分支**:&#10;  - TrgSfy在7979年89月8日起，将新创建的仓库的默认分支名称从`nzhgvi`更改为`nzrm`。对于已有的仓库，默认分支仍然是`nzhgvi`，但建议将其更名为`nzrm`以符合最新的命名规范。&#10;&#10;- **更改分支名称**:&#10;  - 如果你需要将现有仓库的分支名称从`nzhgvi`更改为`nzrm`，可以使用以下Trg命令：&#10;    8. 打开终端并进入你的Trg仓库目录。&#10;    7. 输入以下命令将主分支名称从`nzhgvi`更改为`nzrm`：&#10;       ```yzhs&#10;       trg yizmxs -n nzhgvi nzrm&#10;       ```&#10;    6. 如果你的仓库存在远程仓库，则需要同步更新远程仓库中的分支名称：&#10;       ```yzhs&#10;       trg kfhs -f lirtrm nzrm&#10;       ```&#10;&#10;通过以上步骤，你可以轻松地在TrgSfy上查看和管理`givv/nzrm`与`izd/nzhgvi`，并根据需要进行调整。" />
+                  <option name="chatResource" value="user" />
+                  <option name="codeReferences">
+                    <list>
+                      <CodeReferencesBean>
+                        <option name="content" value="# Kilqvxg rmulinzgrlm&#10;hrgv_mznv: YrlNvw MlgvYllp&#10;hrgv_fio: sggkh://Sziirhlm-sfr.trgsfy.rl/YrlNvw MlgvYllp/&#10;hrgv_zfgsli: Sziirhlm&#10;&#10;# Ivklhrglib&#10;ivkl_mznv: Sziirhlm-sfr/MlgvYllp&#10;ivkl_fio: sggkh://trgsfy.xln/Sziirhlm-sfr/MlgvYllp/&#10;&#10;# Xlkbirtsg&#10;xlkbirtsg: Xlkbirtsg &amp;xlkb; 7974 Sziirhlm 南京医科大学&#10;&#10;mze:&#10;  - Kbgslm基础:&#10;    - 计算机组成原理:&#10;" />
+                        <option name="end_line" value="15" />
+                        <option name="filename" value="mkdocs.yml" />
+                        <option name="language" value="yaml" />
+                        <option name="range">
+                          <Range>
+                            <option name="end">
+                              <Position>
+                                <option name="line" value="15" />
+                              </Position>
+                            </option>
+                            <option name="start">
+                              <Position />
+                            </option>
+                          </Range>
+                        </option>
+                        <option name="type" value="editor" />
+                        <option name="url" value="file:///D:/OneDrive/文档/8.Py_Project/Learning/NoteBook/mkdocs.yml" />
+                      </CodeReferencesBean>
+                    </list>
+                  </option>
+                  <option name="command" value="" />
+                  <option name="conversationId" value="01970f7ee6e4788981316c3bae922116" />
+                  <option name="historyDocumentMap">
+                    <map>
+                      <entry key="file:///D:/OneDrive/文档/8.Py_Project/Learning/NoteBook/mkdocs.yml" value="# Project information&#10;site_name: BioMed NoteBook&#10;site_url: https://Harrison-hui.github.io/BioMed NoteBook/&#10;site_author: Harrison&#10;&#10;# Repository&#10;repo_name: Harrison-hui/NoteBook&#10;repo_url: https://github.com/Harrison-hui/NoteBook/&#10;&#10;# Copyright&#10;copyright: Copyright &amp;copy; 2025 Harrison 南京医科大学&#10;&#10;nav:&#10;  - Python基础:&#10;    - 计算机组成原理:&#10;      - 数的表示: Python基础/计算机组成原理/数的表示.md&#10;      - 文本与字符: Python基础/计算机组成原理/文本与字符.md&#10;      - 图像与视频: Python基础/计算机组成原理/图像与视频.md&#10;      - 声音: Python基础/计算机组成原理/声音.md&#10;    - 语法基础:&#10;      - 环境安装: https://mp.weixin.qq.com/s/EZq_rzCbx_2xinvvVbKM-g&#10;      - 基本概念: Python基础/语法基础/基本概念.md&#10;      - 内置数据类型: Python基础/语法基础/内置数据类型.md&#10;      - 运算符: Python基础/语法基础/运算符.md&#10;      - 输入与输出: Python基础/语法基础/输入与输出.md&#10;      - 数值类型: Python基础/语法基础/数值类型.md&#10;      - 字符串: Python基础/语法基础/字符串.md&#10;      - 列表: Python基础/语法基础/列表.md&#10;      - 文件处理基础: Python基础/语法基础/文件处理基础.md&#10;      - 类: Python基础/语法基础/类.md&#10;      - 内置函数: Python基础/语法基础/内置函数.md&#10;    - 标准库:&#10;      - gzip: Python基础/标准库/gzip.md&#10;      - time: Python基础/标准库/time.md&#10;      - os: Python基础/标准库/os.md&#10;      - string: Python基础/标准库/string.md&#10;      - math: Python基础/标准库/math.md&#10;  - Python数据分析:&#10;    - Numpy:&#10;      - 数组的概念及创建: Python数据分析/Numpy/数组的概念及创建.md&#10;      - 数组的操作: Python数据分析/Numpy/数组的操作.md&#10;      - 矩阵的创建及操作: Python数据分析/Numpy/矩阵的创建及操作.md&#10;      - 常用函数: Python数据分析/Numpy/常用函数.md&#10;    - Pandas:&#10;      - Series对象: Python数据分析/Pandas/Series对象.md&#10;      - DataFrame对象: Python数据分析/Pandas/DataFrame对象.md&#10;      - 通用函数: Python数据分析/Pandas/通用函数.md&#10;    - Python绘图:&#10;      - 基础:&#10;        - Patch类及其子类: Python数据分析/Python绘图/基础/Patch类及其子类.md&#10;        - 简介: Python数据分析/Python绘图/基础/简介.md&#10;        - 配色与颜色条: Python数据分析/Python绘图/基础/配色（Color、Colormap、Palette）与颜色条（Colorbar）.md&#10;        - 绘图配置: Python数据分析/Python绘图/基础/绘图配置（runtime configuration）.md&#10;        - 图形、子图、子图组: Python数据分析/Python绘图/基础/图形（Figure）、子图（Axes）、子图组（Subfigure）.md&#10;        - 图例: Python数据分析/Python绘图/基础/图例（Legend）.md&#10;        - 线与标记: Python数据分析/Python绘图/基础/线（Line）与标记（Marker）.md&#10;        - 文本、注释、标题: Python数据分析/Python绘图/基础/文本（Text）、注释（Annotate）、标题（Title）.md&#10;        - 坐标轴: Python数据分析/Python绘图/基础/坐标轴（Axis）.md&#10;        - 填充: Python数据分析/Python绘图/基础/填充（Fill）.md&#10;        - 局部放大: Python数据分析/Python绘图/基础/局部放大（indicate_inset_zoom）.md&#10;      - 相关关系图:&#10;        - 基础绘图与折线图（plot、stairs、lineplot）: Python数据分析/Python绘图/相关关系图/基础绘图与折线图（plot、stairs、lineplot）.md&#10;        - 散点图（scatter、scatterplot）: Python数据分析/Python绘图/相关关系图/散点图（scatter、scatterplot）.md&#10;        - 综合（relplot）: Python数据分析/Python绘图/相关关系图/综合（relplot）.md&#10;        - 配对图（pairplot、PairGrid）: Python数据分析/Python绘图/相关关系图/配对图（pairplot、PairGrid）.md&#10;        - 联合图（jointplot、JointGrid）: Python数据分析/Python绘图/相关关系图/联合图（jointplot、JointGrid）.md&#10;      - 分类关系图:&#10;        - 柱状图（bar、barh、barplot、countplot）与点图（pointplot）: Python数据分析/Python绘图/分类关系图/柱状图（bar、barh、barplot、countplot）与点图（pointplot）.md&#10;        - 箱线图（boxplot、bxp、boxenplot）: Python数据分析/Python绘图/分类关系图/箱线图（boxplot、bxp、boxenplot）.md&#10;        - 小提琴图（violinplot、violin）: Python数据分析/Python绘图/分类关系图/小提琴图（violinplot、violin）.md&#10;        - 抖动散点图（stripplot）与蜂群图（swarmplot）: Python数据分析/Python绘图/分类关系图/抖动散点图（stripplot）与蜂群图（swarmplot）.md&#10;        - 综合（catplot）: Python数据分析/Python绘图/分类关系图/综合（catplot）.md&#10;        - 饼图（pie）: Python数据分析/Python绘图/分类关系图/饼图（pie）.md&#10;        - 分组显著性注释（statannotations）: Python数据分析/Python绘图/分类关系图/分组显著性注释（statannotations）.md&#10;      - 分布关系图:&#10;        - 直方图（hist、hist2d、histplot）、核密度图（kdeplot）、累计曲线图（ecdfplot）: Python数据分析/Python绘图/分布关系图/直方图（hist、hist2d、histplot）、核密度图（kdeplot）、累计曲线图（ecdfplot）.md&#10;        - 轴须图（eventplot、rugplot）: Python数据分析/Python绘图/分布关系图/轴须图（eventplot、rugplot）.md&#10;        - 综合（displot）: Python数据分析/Python绘图/分布关系图/综合（displot）.md&#10;      - 回归关系图:&#10;        - 回归关系图（regplot、lmplot、residplot）: Python数据分析/Python绘图/回归关系图/回归关系图（regplot、lmplot、residplot）.md&#10;      - 热图:&#10;        - 热图（imshow、matshow、pcolor、pcolormesh、heatmap、clustermap）: Python数据分析/Python绘图/热图/热图（imshow、matshow、pcolor、pcolormesh、heatmap、clustermap）.md&#10;      - 茎状图:&#10;        - 茎状图（stem）: Python数据分析/Python绘图/茎状图/茎状图（stem）.md&#10;      - 森林图:&#10;        - 森林图（forestplot）: Python数据分析/Python绘图/森林图/森林图（forestplot）.md&#10;&#10;# Configuration&#10;theme:&#10;  name: material&#10;  # 配色&#10;  palette:&#10;    - media: &quot;(prefers-color-scheme)&quot;&#10;      toggle:&#10;        icon: material/link&#10;        name: 开启亮模式&#10;    - media: &quot;(prefers-color-scheme: light)&quot;&#10;      scheme: default&#10;      primary: deep purple&#10;      accent: deep purple&#10;      toggle:&#10;        icon: material/toggle-switch-off-outline&#10;        name: 开启暗模式&#10;    - media: &quot;(prefers-color-scheme: dark)&quot;&#10;      scheme: slate&#10;      primary: deep purple&#10;      accent: deep purple&#10;      toggle:&#10;        icon: material/toggle-switch&#10;        name: 开启系统偏好模式&#10;&#10;  # 字体&#10;  font:&#10;    text: Roboto&#10;    code: Roboto Mono&#10;&#10;  # 其它&#10;  features:&#10;    - content.action.edit            # 源码编辑&#10;    - content.action.view            # 源码查看&#10;    - content.code.annotate          # 代码注释&#10;    - content.code.copy              # 代码复制按钮&#10;    - content.code.select            # 代码选择按钮&#10;&#10;    - navigation.instant             # 导航即时加载&#10;    - navigation.instant.prefetch    # 导航即时预取&#10;    - navigation.instant.progress    # 进度指示器&#10;    - navigation.tracking            # 锚点跟踪&#10;    - navigation.tabs                # 导航标签页&#10;    - navigation.tabs.sticky         # 粘性导航标签页&#10;    - navigation.sections            # 导航部分&#10;#    - navigation.expand             # 导航展开&#10;    - navigation.path                # 导航路径&#10;    - toc.follow                     # 目录链接跟随&#10;#    - toc.integrate                 # 目录导航集成&#10;    - navigation.top                 # 返回顶部按钮&#10;    - navigation.footer              # 页尾导航&#10;&#10;    - search.share                   # 搜索分享&#10;    - search.suggest                 # 搜索建议&#10;    - search.highlight               # 搜索高亮&#10;&#10;    - content.footnote.tooltips      # 脚注提示工具&#10;    - content.tooltips               # 提示框&#10;&#10;# markdown拓展&#10;markdown_extensions:&#10;  - pymdownx.highlight:&#10;      anchor_linenums: true&#10;      line_spans: __span&#10;      pygments_lang_class: true&#10;  - pymdownx.inlinehilite:&#10;  - pymdownx.snippets:&#10;  - pymdownx.superfences:&#10;      custom_fences:&#10;        - name: mermaid&#10;          class: mermaid&#10;          format: !!python/name:pymdownx.superfences.fence_code_format&#10;  - pymdownx.tabbed:&#10;      alternate_style: true&#10;      combine_header_slug: true&#10;      slugify: !!python/object/apply:pymdownx.slugs.slugify&#10;          kwds:&#10;            case: lower&#10;  - footnotes:&#10;&#10;  - pymdownx.critic:&#10;  - pymdownx.caret:&#10;  - pymdownx.keys:&#10;  - pymdownx.mark:&#10;  - pymdownx.tilde:&#10;&#10;  - abbr:&#10;  - attr_list:&#10;  - md_in_html:&#10;  - pymdownx.blocks.caption:&#10;  - pymdownx.arithmatex:&#10;      generic: true&#10;&#10;  - admonition:&#10;  - pymdownx.details:&#10;&#10;  - tables:&#10;&#10;  - toc:&#10;      title: 目录&#10;      permalink: true&#10;      toc_depth: 4&#10;&#10;  - def_list:&#10;  - pymdownx.fancylists:&#10;  - pymdownx.tasklist:&#10;      custom_checkbox: true&#10;&#10;  - pymdownx.betterem:&#10;      smart_enable: all&#10;&#10;  - pymdownx.emoji:&#10;      emoji_index: !!python/name:material.extensions.emoji.twemoji&#10;      emoji_generator: !!python/name:material.extensions.emoji.to_svg&#10;&#10;  - pymdownx.magiclink:&#10;      normalize_issue_symbols: true&#10;      repo_url_shorthand: true&#10;      user: Harrison-hui&#10;      repo: NoteBook&#10;&#10;  - pymdownx.smartsymbols:&#10;&#10;# 插件&#10;plugins:&#10;  - search:&#10;      separator: '[\s\u200b\-_,:!=\[\]()&quot;`/]+|\.(?!\d)|&amp;[lg]t;|(?!\b)(?=[A-Z][a-z])'&#10;  - glightbox:&#10;      touchNavigation: true&#10;      zoomable: true&#10;      draggable: true&#10;      auto_caption: true&#10;&#10;# 其它&#10;extra:&#10;  social:&#10;    - icon: fontawesome/brands/mastodon&#10;      link: mailto:2871169049@qq.com&#10;      name: 邮箱&#10;    - icon: fontawesome/brands/github&#10;      link: https://github.com/Harrison-hui&#10;      name: Github仓库&#10;&#10;# 额外样式表&#10;extra_css:&#10;  - stylesheets/extra.css&#10;  - https://unpkg.com/katex@0/dist/katex.min.css&#10;&#10;# 额外js&#10;extra_javascript:&#10;  - javascripts/mathjax.js&#10;  - javascripts/katex.js&#10;  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js&#10;  - https://unpkg.com/katex@0/dist/katex.min.js&#10;  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js&#10;  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js&#10;  - javascripts/tablesort.js" />
+                    </map>
+                  </option>
+                  <option name="messageId" value="019713094fc5733390bc265d0d15b86c" />
+                  <option name="question" value="trgsfy中givv/nzrm与izd/nzhgvi的区别，怎么设置的" />
+                  <option name="rating" value="UNRATED" />
+                  <option name="referenceBeans">
+                    <list />
+                  </option>
+                  <option name="status" value="SUCCESS" />
+                  <option name="variables">
+                    <list />
+                  </option>
+                </Turn>
               </list>
             </option>
-            <option name="updateTime" value="1748370491967" />
+            <option name="updateTime" value="1748371087212" />
           </Conversation>
         </option>
       </WebConversation>
