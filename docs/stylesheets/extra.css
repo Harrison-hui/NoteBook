@@ -1,0 +1,33 @@
+:root > * {
+  --md-tooltip-width: max-content;
+}
+
+
+table.data-table {
+       border-collapse: collapse;
+       width: auto;
+}
+table.data-table caption{
+    font-size: 1.2em;
+    font-weight: bold;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+table.data-table thead tr th{
+    font-weight: bold;
+}
+table.data-table, table.data-table th, table.data-table td {
+    border: 2px solid black;
+    text-align: center;
+    vertical-align: middle;
+    padding: 1px 2px 1px 2px;
+}
+table.data-table th, table.data-table td {
+    max-width: 100%;
+}
+
+
+.md-grid {
+    max-width: 1440px;
+}

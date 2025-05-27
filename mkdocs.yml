@@ -1,0 +1,243 @@
+# Project information
+site_name: BioMed NoteBook
+site_url: https://Harrison-hui.github.io/BioMed NoteBook/
+site_author: Harrison
+
+# Repository
+repo_name: Harrison-hui/NoteBook
+repo_url: https://github.com/Harrison-hui/NoteBook
+
+# Copyright
+copyright: Copyright &copy; 2025 Harrison 南京医科大学
+
+nav:
+  - Python基础:
+    - 计算机组成原理:
+      - 数的表示: Python基础/计算机组成原理/数的表示.md
+      - 文本与字符: Python基础/计算机组成原理/文本与字符.md
+      - 图像与视频: Python基础/计算机组成原理/图像与视频.md
+      - 声音: Python基础/计算机组成原理/声音.md
+    - 语法基础:
+      - 环境安装: https://mp.weixin.qq.com/s/EZq_rzCbx_2xinvvVbKM-g
+      - 基本概念: Python基础/语法基础/基本概念.md
+      - 内置数据类型: Python基础/语法基础/内置数据类型.md
+      - 运算符: Python基础/语法基础/运算符.md
+      - 输入与输出: Python基础/语法基础/输入与输出.md
+      - 数值类型: Python基础/语法基础/数值类型.md
+      - 字符串: Python基础/语法基础/字符串.md
+      - 列表: Python基础/语法基础/列表.md
+      - 文件处理基础: Python基础/语法基础/文件处理基础.md
+      - 类: Python基础/语法基础/类.md
+      - 内置函数: Python基础/语法基础/内置函数.md
+    - 标准库:
+      - gzip: Python基础/标准库/gzip.md
+      - time: Python基础/标准库/time.md
+      - os: Python基础/标准库/os.md
+      - string: Python基础/标准库/string.md
+      - math: Python基础/标准库/math.md
+  - Python数据分析:
+    - Numpy:
+      - 数组的概念及创建: Python数据分析/Numpy/数组的概念及创建.md
+      - 数组的操作: Python数据分析/Numpy/数组的操作.md
+      - 矩阵的创建及操作: Python数据分析/Numpy/矩阵的创建及操作.md
+      - 常用函数: Python数据分析/Numpy/常用函数.md
+    - Pandas:
+      - Series对象: Python数据分析/Pandas/Series对象.md
+      - DataFrame对象: Python数据分析/Pandas/DataFrame对象.md
+      - 通用函数: Python数据分析/Pandas/通用函数.md
+    - Python绘图:
+      - 基础:
+        - Patch类及其子类: Python数据分析/Python绘图/基础/Patch类及其子类.md
+        - 简介: Python数据分析/Python绘图/基础/简介.md
+        - 配色与颜色条: Python数据分析/Python绘图/基础/配色（Color、Colormap、Palette）与颜色条（Colorbar）.md
+        - 绘图配置: Python数据分析/Python绘图/基础/绘图配置（runtime configuration）.md
+        - 图形、子图、子图组: Python数据分析/Python绘图/基础/图形（Figure）、子图（Axes）、子图组（Subfigure）.md
+        - 图例: Python数据分析/Python绘图/基础/图例（Legend）.md
+        - 线与标记: Python数据分析/Python绘图/基础/线（Line）与标记（Marker）.md
+        - 文本、注释、标题: Python数据分析/Python绘图/基础/文本（Text）、注释（Annotate）、标题（Title）.md
+        - 坐标轴: Python数据分析/Python绘图/基础/坐标轴（Axis）.md
+        - 填充: Python数据分析/Python绘图/基础/填充（Fill）.md
+        - 局部放大: Python数据分析/Python绘图/基础/局部放大（indicate_inset_zoom）.md
+      - 相关关系图:
+        - 基础绘图与折线图（plot、stairs、lineplot）: Python数据分析/Python绘图/相关关系图/基础绘图与折线图（plot、stairs、lineplot）.md
+        - 散点图（scatter、scatterplot）: Python数据分析/Python绘图/相关关系图/散点图（scatter、scatterplot）.md
+        - 综合（relplot）: Python数据分析/Python绘图/相关关系图/综合（relplot）.md
+        - 配对图（pairplot、PairGrid）: Python数据分析/Python绘图/相关关系图/配对图（pairplot、PairGrid）.md
+        - 联合图（jointplot、JointGrid）: Python数据分析/Python绘图/相关关系图/联合图（jointplot、JointGrid）.md
+      - 分类关系图:
+        - 柱状图（bar、barh、barplot、countplot）与点图（pointplot）: Python数据分析/Python绘图/分类关系图/柱状图（bar、barh、barplot、countplot）与点图（pointplot）.md
+        - 箱线图（boxplot、bxp、boxenplot）: Python数据分析/Python绘图/分类关系图/箱线图（boxplot、bxp、boxenplot）.md
+        - 小提琴图（violinplot、violin）: Python数据分析/Python绘图/分类关系图/小提琴图（violinplot、violin）.md
+        - 抖动散点图（stripplot）与蜂群图（swarmplot）: Python数据分析/Python绘图/分类关系图/抖动散点图（stripplot）与蜂群图（swarmplot）.md
+        - 综合（catplot）: Python数据分析/Python绘图/分类关系图/综合（catplot）.md
+        - 饼图（pie）: Python数据分析/Python绘图/分类关系图/饼图（pie）.md
+        - 分组显著性注释（statannotations）: Python数据分析/Python绘图/分类关系图/分组显著性注释（statannotations）.md
+      - 分布关系图:
+        - 直方图（hist、hist2d、histplot）、核密度图（kdeplot）、累计曲线图（ecdfplot）: Python数据分析/Python绘图/分布关系图/直方图（hist、hist2d、histplot）、核密度图（kdeplot）、累计曲线图（ecdfplot）.md
+        - 轴须图（eventplot、rugplot）: Python数据分析/Python绘图/分布关系图/轴须图（eventplot、rugplot）.md
+        - 综合（displot）: Python数据分析/Python绘图/分布关系图/综合（displot）.md
+      - 回归关系图:
+        - 回归关系图（regplot、lmplot、residplot）: Python数据分析/Python绘图/回归关系图/回归关系图（regplot、lmplot、residplot）.md
+      - 热图:
+        - 热图（imshow、matshow、pcolor、pcolormesh、heatmap、clustermap）: Python数据分析/Python绘图/热图/热图（imshow、matshow、pcolor、pcolormesh、heatmap、clustermap）.md
+      - 茎状图:
+        - 茎状图（stem）: Python数据分析/Python绘图/茎状图/茎状图（stem）.md
+      - 森林图:
+        - 森林图（forestplot）: Python数据分析/Python绘图/森林图/森林图（forestplot）.md
+
+# Configuration
+theme:
+  name: material
+  # 配色
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: 开启亮模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: 开启暗模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/toggle-switch
+        name: 开启系统偏好模式
+
+  # 字体
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  # 其它
+  features:
+    - content.action.edit            # 源码编辑
+    - content.action.view            # 源码查看
+    - content.code.annotate          # 代码注释
+    - content.code.copy              # 代码复制按钮
+    - content.code.select            # 代码选择按钮
+
+    - navigation.instant             # 导航即时加载
+    - navigation.instant.prefetch    # 导航即时预取
+    - navigation.instant.progress    # 进度指示器
+    - navigation.tracking            # 锚点跟踪
+    - navigation.tabs                # 导航标签页
+    - navigation.tabs.sticky         # 粘性导航标签页
+    - navigation.sections            # 导航部分
+#    - navigation.expand             # 导航展开
+    - navigation.path                # 导航路径
+    - toc.follow                     # 目录链接跟随
+#    - toc.integrate                 # 目录导航集成
+    - navigation.top                 # 返回顶部按钮
+    - navigation.footer              # 页尾导航
+
+    - search.share                   # 搜索分享
+    - search.suggest                 # 搜索建议
+    - search.highlight               # 搜索高亮
+
+    - content.footnote.tooltips      # 脚注提示工具
+    - content.tooltips               # 提示框
+
+# markdown拓展
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite:
+  - pymdownx.snippets:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+          kwds:
+            case: lower
+  - footnotes:
+
+  - pymdownx.critic:
+  - pymdownx.caret:
+  - pymdownx.keys:
+  - pymdownx.mark:
+  - pymdownx.tilde:
+
+  - abbr:
+  - attr_list:
+  - md_in_html:
+  - pymdownx.blocks.caption:
+  - pymdownx.arithmatex:
+      generic: true
+
+  - admonition:
+  - pymdownx.details:
+
+  - tables:
+
+  - toc:
+      title: 目录
+      permalink: true
+      toc_depth: 4
+
+  - def_list:
+  - pymdownx.fancylists:
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+  - pymdownx.betterem:
+      smart_enable: all
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: Harrison-hui
+      repo: NoteBook
+
+  - pymdownx.smartsymbols:
+
+# 插件
+plugins:
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - glightbox:
+      touchNavigation: true
+      zoomable: true
+      draggable: true
+      auto_caption: true
+
+# 其它
+extra:
+  social:
+    - icon: fontawesome/brands/mastodon
+      link: mailto:2871169049@qq.com
+      name: 邮箱
+    - icon: fontawesome/brands/github
+      link: https://github.com/Harrison-hui
+      name: Github仓库
+
+# 额外样式表
+extra_css:
+  - stylesheets/extra.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+# 额外js
+extra_javascript:
+  - javascripts/mathjax.js
+  - javascripts/katex.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
