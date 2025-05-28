@@ -88,6 +88,7 @@ nav:
 # Configuration
 theme:
   name: material
+  custom_dir: overrides
   # 配色
   palette:
     - media: "(prefers-color-scheme)"
