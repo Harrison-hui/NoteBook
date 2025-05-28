@@ -32,4 +32,5 @@ jobs:
                          mkdocs-git-authors-plugin \
                          mkdocs-git-committers-plugin-2 \
                          mkdocs-glightbox \
+                         mkdocs-jupyter \
       - run: mkdocs gh-deploy --force
