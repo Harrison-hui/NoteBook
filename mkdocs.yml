@@ -84,10 +84,6 @@ nav:
         - 茎状图（stem）: Python数据分析/Python绘图/茎状图/茎状图（stem）.md
       - 森林图:
         - 森林图（forestplot）: Python数据分析/Python绘图/森林图/森林图（forestplot）.md
-  - 单细胞分析（sc-RNAseq）:
-    - 基础:
-      - AnnData对象: 单细胞分析（sc-RNAseq）/基础/01. AnnData对象.ipynb
-      - tp: 单细胞分析（sc-RNAseq）/基础/tp.ipynb
 
 # Configuration
 theme:
