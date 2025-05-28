@@ -213,8 +213,6 @@ plugins:
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - meta:
-      enabled: true
-      meta_file: .meta.yml
   - glightbox:
       touchNavigation: true
       zoomable: true
