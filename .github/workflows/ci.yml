@@ -33,4 +33,5 @@ jobs:
                          mkdocs-git-committers-plugin-2 \
                          mkdocs-glightbox \
                          mkdocs-jupyter \
+                         anndata \
       - run: mkdocs gh-deploy --force
