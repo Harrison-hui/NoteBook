@@ -1,7 +1,3 @@
----
-comments: true
----
-
 # 图例（Legend）
 
 [Legend guide — Matplotlib 3.10.1 documentation](https://matplotlib.org/stable/users/explain/axes/legend_guide.html#legend-guide)
