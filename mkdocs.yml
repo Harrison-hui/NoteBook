@@ -87,6 +87,7 @@ nav:
   - 单细胞分析（sc-RNAseq）:
     - 基础:
       - AnnData对象: 单细胞分析（sc-RNAseq）/基础/01. AnnData对象.ipynb
+      - tp: 单细胞分析（sc-RNAseq）/基础/tp.ipynb
 
 # Configuration
 theme:
