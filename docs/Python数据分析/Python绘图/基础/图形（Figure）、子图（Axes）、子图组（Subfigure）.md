@@ -378,7 +378,10 @@ plt.show()
         c.  'row': 同行共享
         d.  'col': 同列共享
 
-    3.  取消返回的子图数组的多余维度，若为False，则返回的子图数组始终为二维数组
+    3.  取消返回的子图数组的多余维度
+
+        若为False，则返回的子图数组始终为二维数组
+
     4.  每列宽度比例，相当于gridspec_kw={"width_ratios": []}
     5.  每行高度比例，相当于gridspec_kw={"height_ratios": []}
     6.  Axes全局参数
