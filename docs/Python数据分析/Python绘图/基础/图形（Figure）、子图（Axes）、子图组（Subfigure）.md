@@ -318,20 +318,20 @@ plt.show()
         c.  'row': 同行共享
         d.  'col': 同列共享
 
-    2. 共享y轴, 可选:
+    2.  共享y轴, 可选:
         a.  True/'all': 所有子图共享
         b.  False/'none': 不共享
         c.  'row': 同行共享
         d.  'col': 同列共享
 
-    3. 取消返回的子图数组的多余维度
+    3.  取消返回的子图数组的多余维度
 
-       若为False，则返回的子图数组始终为二维数组
+        若为False，则返回的子图数组始终为二维数组
 
-    4. 每列宽度比例，相当于gridspec_kw={"width_ratios": []}
-    5. 每行高度比例，相当于gridspec_kw={"height_ratios": []}
-    6. Axes全局参数
-    7. Gridspec参数
+    4.  每列宽度比例，相当于gridspec_kw={"width_ratios": []}
+    5.  每行高度比例，相当于gridspec_kw={"height_ratios": []}
+    6.  Axes全局参数
+    7.  Gridspec参数
 
     ![img.png](../../../images/图形、子图、子图组/img_8.png){ width="50%" align="center"}
 
@@ -372,17 +372,17 @@ plt.show()
         c.  'row': 同行共享
         d.  'col': 同列共享
 
-    2. 共享y轴, 可选:
+    2.  共享y轴, 可选:
         a.  True/'all': 所有子图共享
         b.  False/'none': 不共享
         c.  'row': 同行共享
         d.  'col': 同列共享
 
-    3. 取消返回的子图数组的多余维度，若为False，则返回的子图数组始终为二维数组
-    4. 每列宽度比例，相当于gridspec_kw={"width_ratios": []}
-    5. 每行高度比例，相当于gridspec_kw={"height_ratios": []}
-    6. Axes全局参数
-    7. Gridspec参数
+    3.  取消返回的子图数组的多余维度，若为False，则返回的子图数组始终为二维数组
+    4.  每列宽度比例，相当于gridspec_kw={"width_ratios": []}
+    5.  每行高度比例，相当于gridspec_kw={"height_ratios": []}
+    6.  Axes全局参数
+    7.  Gridspec参数
     
     ![img.png](../../../images/图形、子图、子图组/img_9.png){ width="50%" align="center"}
 
