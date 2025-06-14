@@ -422,14 +422,23 @@ plt.show()
     plt.show()
     ```
     
-    1. 所有子图共享x轴
-    2. 所有子图共享y轴
-    3. 每列宽度比例，相当于gridspec_kw={"width_ratios": []}
-    4. 每行高度比例，相当于gridspec_kw={"height_ratios": []}
-    5. 留空标签，默认"."
-    6. Axes全局参数
-    7. Axes特定参数，优先级高于subplot_kw参数
-    8. Gridspec参数
+    1.  所有子图共享x轴
+    2.  所有子图共享y轴
+    3.  每列宽度比例
+
+        相当于gridspec_kw={"width_ratios": []}
+
+    4.  每行高度比例
+        
+        相当于gridspec_kw={"height_ratios": []}
+
+    5.  留空标签，默认"."
+    6.  Axes全局参数
+    7.  Axes特定参数
+
+        优先级高于subplot_kw参数
+
+    8.  Gridspec参数
     
     ![img.png](../../../images/图形、子图、子图组/img_10.png){ width="50%" align="center"}
 
@@ -474,14 +483,23 @@ plt.show()
     plt.show()
     ```
 
-    1. 所有子图共享x轴
-    2. 所有子图共享y轴
-    3. 每列宽度比例，相当于gridspec_kw={"width_ratios": []}
-    4. 每行高度比例，相当于gridspec_kw={"height_ratios": []}
-    5. 留空标签，默认"."
-    6. Axes全局参数
-    7. Axes特定参数，优先级高于subplot_kw参数
-    8. Gridspec参数
+    1.  所有子图共享x轴
+    2.  所有子图共享y轴
+    3.  每列宽度比例
+
+        相当于gridspec_kw={"width_ratios": []}
+
+    4.  每行高度比例
+
+        相当于gridspec_kw={"height_ratios": []}
+
+    5.  留空标签，默认"."
+    6.  Axes全局参数
+    7.  Axes特定参数
+
+        优先级高于subplot_kw参数
+
+    8.  Gridspec参数
     
     ![img.png](../../../images/图形、子图、子图组/img_11.png){ width="50%" align="center"}
 
@@ -583,10 +601,13 @@ ax.plot(x, y)
 plt.show()
 ```
 
-1. 取消返回的子图组数组的多余维度，若为False，则返回的子图组数组始终为二维数组
-2. 列间隔（平均轴宽度百分比）
-3. 行间隔（平均轴宽度百分比）
-4. 每列宽度比例
-5. 每行高度比例
+1.  取消返回的子图组数组的多余维度 
+
+    若为False，则返回的子图组数组始终为二维数组
+
+2.  列间隔（平均轴宽度百分比）
+3.  行间隔（平均轴宽度百分比）
+4.  每列宽度比例
+5.  每行高度比例
 
 ![img.png](../../../images/图形、子图、子图组/img_14.png){ width="50%" align="center"}
