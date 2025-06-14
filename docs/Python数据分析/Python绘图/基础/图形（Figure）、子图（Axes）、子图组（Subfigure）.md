@@ -325,7 +325,6 @@ plt.show()
         d.  'col': 同列共享
 
     3.  取消返回的子图数组的多余维度
-
         若为False，则返回的子图数组始终为二维数组
 
     4.  每列宽度比例，相当于gridspec_kw={"width_ratios": []}
