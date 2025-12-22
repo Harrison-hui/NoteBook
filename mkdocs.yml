@@ -29,6 +29,7 @@ nav:
       - 文件处理基础: Python基础/语法基础/文件处理基础.md
       - 类: Python基础/语法基础/类.md
       - 内置函数: Python基础/语法基础/内置函数.md
+      - Seurat: Python基础/语法基础/Seurat流程复现.ipynb
     - 标准库:
       - gzip: Python基础/标准库/gzip.md
       - time: Python基础/标准库/time.md
