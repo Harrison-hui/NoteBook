@@ -32,6 +32,7 @@ jobs:
           upgrade: 'TRUE'
           needs: check
       - run: |
+          Rscript -e 'options(BioC_mirror="https://mirrors.tuna.tsinghua.edu.cn/bioconductor/")'
           Rscript -e 'BiocManager::install(version="3.22")'
           Rscript -e 'devtools::install_github("satijalab/seurat-data")'
           Rscript -e 'install.packages('Seurat')'
