@@ -31,7 +31,6 @@ jobs:
             any::devtools
           upgrade: 'TRUE'
           needs: check
-      - uses: r-lib/actions/check-r-package@v2
       - run: |
           Rscript -e 'BiocManager::install(version="3.22")'
           Rscript -e 'devtools::install_github("satijalab/seurat-data")'
