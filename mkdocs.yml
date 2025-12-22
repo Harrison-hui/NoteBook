@@ -226,8 +226,8 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/mastodon
-      link: mailto:2871169049@qq.com
-      name: 邮箱
+      link: mailto:harrison@stu.njmu.edu.cn
+      name: 校园邮箱
     - icon: fontawesome/brands/github
       link: https://github.com/Harrison-hui
       name: Github仓库
