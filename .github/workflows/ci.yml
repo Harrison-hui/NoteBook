@@ -21,8 +21,6 @@ jobs:
           r-version: 'latest'
           rtools-version: ''
           cran: 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/'
-      - run: |
-          Rscript -e 'Sys.setenv(GITHUB_PAT="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")'
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: |
@@ -43,6 +41,7 @@ jobs:
           upgrade: 'TRUE'
           needs: check
       - run: |
+          Rscript -e 'Sys.setenv(GITHUB_PAT="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")'
           Rscript -e 'devtools::install_github("satijalab/seurat-data")'
           Rscript -e 'install.packages('BPCells', repos=c('https://bnprks.r-universe.dev', 'https://cloud.r-project.org'))'
           Rscript -e 'install.packages('presto', repos=c('https://satijalab.r-universe.dev', 'https://cloud.r-project.org'))'
