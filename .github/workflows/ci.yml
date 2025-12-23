@@ -24,6 +24,7 @@ jobs:
       - run: |
           Rscript -e 'options(BioC_mirror="https://mirrors.tuna.tsinghua.edu.cn/bioconductor/")'
           Rscript -e 'Sys.chmod("/opt/R/4.5.2/lib/R/library",'777')'
+          Rscript -e 'Sys.setenv(GITHUB_PAT="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")'
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: |
