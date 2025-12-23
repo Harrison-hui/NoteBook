@@ -22,14 +22,11 @@ jobs:
           rtools-version: ''
           cran: 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/'
       - run: |
-          Rscript -e 'options(BioC_mirror="https://mirrors.tuna.tsinghua.edu.cn/bioconductor/")'
-          Rscript -e 'Sys.chmod("/opt/R/4.5.2/lib/R/library",'777')'
           Rscript -e 'Sys.setenv(GITHUB_PAT="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")'
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: |
             any::ggplot2
-            any::BiocManager
             any::limma
             any::gert
             any::devtools
@@ -42,16 +39,15 @@ jobs:
             any::Signac
             any::R.utils
             any::SoupX
+            any::scDblFinder
           upgrade: 'TRUE'
           needs: check
       - run: |
-          Rscript -e 'BiocManager::install(version="3.22")'
           Rscript -e 'devtools::install_github("satijalab/seurat-data")'
           Rscript -e 'install.packages('BPCells', repos=c('https://bnprks.r-universe.dev', 'https://cloud.r-project.org'))'
           Rscript -e 'install.packages('presto', repos=c('https://satijalab.r-universe.dev', 'https://cloud.r-project.org'))'
           Rscript -e 'devtools::install_github("satijalab/azimuth")'
           Rscript -e 'devtools::install_github("satijalab/seurat-wrappers")'
-          Rscript -e 'BiocManager::install("plger/scDblFinder")'
           Rscript -e 'devtools::install_github('chris-mcginnis-ucsf/DoubletFinder')'
 
       - uses: actions/setup-python@v5
