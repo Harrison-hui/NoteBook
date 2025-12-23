@@ -38,16 +38,14 @@ jobs:
             any::R.utils
             any::SoupX
             any::scDblFinder
+            any::satijalab/seurat-data
+            any::BPCells
+            any::presto
+            any::satijalab/azimuth
+            any::satijalab/seurat-wrappers
+            any::chris-mcginnis-ucsf/DoubletFinder
           upgrade: 'TRUE'
           needs: check
-      - run: |
-          Rscript -e 'Sys.setenv(GITHUB_PAT=Sys.getenv(MY_SECRET_KEY))'
-          Rscript -e 'devtools::install_github("satijalab/seurat-data")'
-          Rscript -e 'install.packages('BPCells', repos=c('https://bnprks.r-universe.dev', 'https://cloud.r-project.org'))'
-          Rscript -e 'install.packages('presto', repos=c('https://satijalab.r-universe.dev', 'https://cloud.r-project.org'))'
-          Rscript -e 'devtools::install_github("satijalab/azimuth")'
-          Rscript -e 'devtools::install_github("satijalab/seurat-wrappers")'
-          Rscript -e 'devtools::install_github('chris-mcginnis-ucsf/DoubletFinder')'
 
       - uses: actions/setup-python@v5
         with:
