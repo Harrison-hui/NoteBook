@@ -8,49 +8,83 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: "true"
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
-      - uses: r-lib/actions/setup-r@v2
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+          libcurl4-openssl-dev \
+          libssl-dev \
+          libxml2-dev \
+          libhdf5-dev \
+          libgeos-dev \
+          libudunits2-dev \
+          libgsl-dev \
+          libgit2-dev
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
         with:
           r-version: 'latest'
           rtools-version: ''
           cran: 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/'
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: |
-            any::ggplot2
-            any::limma
-            any::gert
-            any::devtools
-            any::Seurat
-            any::h5mread
-            any::HDF5Array
-            any::glmGamPoi
-            any::GenomeInfoDb
-            any::Rsamtools
-            any::Signac
-            any::R.utils
-            any::SoupX
-            any::scDblFinder
-            any::satijalab/seurat-data
-            any::BPCells
-            any::presto
-            any::satijalab/azimuth
-            any::satijalab/seurat-wrappers
-            any::chris-mcginnis-ucsf/DoubletFinder
           upgrade: 'TRUE'
           needs: check
 
-      - uses: actions/setup-python@v5
+      - name: Install R packages
+        run: |
+          Rscript -e "
+          Sys.setenv(GITHUB_PAT='${{ secrets.GITHUB_TOKEN }}')
+          
+          install.packages("ggplot2")
+          
+          options(BioC_mirror="https://mirrors.tuna.tsinghua.edu.cn/bioconductor/")
+          if (!require("BiocManager", quietly=TRUE))
+            install.packages("BiocManager")
+          BiocManager::install(version="3.22")
+          BiocManager::install("limma")
+          
+          install.packages('gert', repos=c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org'))
+          install.packages("devtools")
+          
+          install.packages('Seurat')
+          BiocManager::install("h5mread")
+          BiocManager::install("HDF5Array")
+          BiocManager::install("glmGamPoi")
+          install.packages('BPCells', repos=c('https://bnprks.r-universe.dev', 'https://cloud.r-project.org'))
+          install.packages('presto', repos=c('https://satijalab.r-universe.dev', 'https://cloud.r-project.org'))
+          BiocManager::install("GenomeInfoDb")
+          BiocManager::install("Rsamtools")
+          install.packages('Signac')
+          devtools::install_github("satijalab/seurat-data", auth_token=Sys.getenv('GITHUB_PAT'))
+          devtools::install_github("satijalab/azimuth", auth_token=Sys.getenv('GITHUB_PAT'))
+          install.packages("R.utils")
+          devtools::install_github("satijalab/seurat-wrappers", auth_token=Sys.getenv('GITHUB_PAT'))
+          install.packages('SoupX')
+          BiocManager::install("plger/scDblFinder")
+          devtools::install_github('chris-mcginnis-ucsf/DoubletFinder', auth_token=Sys.getenv('GITHUB_PAT'))
+          "
+
+      - name: Install Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-      - run: |
+      - name: Install Python packages
+        run: |
           pip install mkdocs-material
           pip install mkdocs-git-revision-date-localized-plugin
           pip install mkdocs-git-authors-plugin
