@@ -27,6 +27,26 @@ jobs:
           r-version: 'latest'
           rtools-version: ''
           cran: 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/'
+
+      - name: Create and configure user library
+        run: |
+            # 创建用户库目录
+            mkdir -p ~/R/library
+            mkdir -p ~/.R
+            
+            # 创建 R 配置文件
+            cat > ~/.Rprofile << 'EOF'
+            # 设置用户库路径
+            .libPaths(c("~/R/library", .libPaths()))
+            # 设置选项
+            options(BioC_mirror='https://mirrors.tuna.tsinghua.edu.cn/bioconductor/')
+            EOF
+
+      - name: Set R library path
+        run: |
+          echo "R_LIBS_USER=~/R/library" >> $GITHUB_ENV
+          echo "R_LIBS=~/R/library" >> $GITHUB_ENV
+
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: |
@@ -41,7 +61,6 @@ jobs:
           Rscript -e "
           Sys.setenv(GITHUB_PAT='${{ secrets.GITHUB_TOKEN }}')
           
-          options(BioC_mirror='https://mirrors.tuna.tsinghua.edu.cn/bioconductor/')
           BiocManager::install(version='3.22')
           BiocManager::install('limma')
           
@@ -96,9 +115,14 @@ jobs:
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
       - uses: actions/cache@v4
         with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
+          key: |
+            mkdocs-material-${{ env.cache_id }}
+            ${{ runner.os }}-r-${{ hashFiles('**/DESCRIPTION') }}-${{ hashFiles('**/renv.lock') }}
+          path: |
+            .cache
+            ~/R/library
           restore-keys: |
             mkdocs-material-
+            ${{ runner.os }}-r-
 
       - run: mkdocs gh-deploy --force
