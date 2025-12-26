@@ -29,6 +29,10 @@ jobs:
           cran: 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/'
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
+          extra-packages: |
+            any::ggplot2
+            any::BiocManager
+            any::devtools
           upgrade: 'TRUE'
           needs: check
 
@@ -37,16 +41,11 @@ jobs:
           Rscript -e "
           Sys.setenv(GITHUB_PAT='${{ secrets.GITHUB_TOKEN }}')
           
-          install.packages("ggplot2")
-          
           options(BioC_mirror="https://mirrors.tuna.tsinghua.edu.cn/bioconductor/")
-          if (!require("BiocManager", quietly=TRUE))
-            install.packages("BiocManager")
           BiocManager::install(version="3.22")
           BiocManager::install("limma")
           
           install.packages('gert', repos=c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org'))
-          install.packages("devtools")
           
           install.packages('Seurat')
           BiocManager::install("h5mread")
