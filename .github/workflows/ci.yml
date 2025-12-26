@@ -40,6 +40,7 @@ jobs:
             .libPaths(c("~/R/library", .libPaths()))
             # 设置选项
             options(BioC_mirror='https://mirrors.tuna.tsinghua.edu.cn/bioconductor/')
+            options(repos=c(CRAN='https://mirrors.tuna.tsinghua.edu.cn/CRAN/'))
             EOF
 
       - name: Set R library path
