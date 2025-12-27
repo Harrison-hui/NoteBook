@@ -121,7 +121,7 @@ jobs:
             ${{ runner.os }}-r-${{ hashFiles('**/DESCRIPTION') }}-${{ hashFiles('**/renv.lock') }}
           path: |
             .cache
-            ~/library
+            /opt/R/4.5.2/lib/R/library
           restore-keys: |
             mkdocs-material-
             ${{ runner.os }}-r-
