@@ -21,10 +21,6 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          mkdir -p ~/library
-          cat > ~/.Rprofile << 'EOF'
-          .libPaths('~/library')
-          EOF
 
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
@@ -43,3 +39,91 @@ jobs:
           ls -la /opt/R/4.5.2/lib/R/library
           touch /opt/R/4.5.2/lib/R/library/test_write && echo "✓ Write test successful" && rm /opt/R/4.5.2/lib/R/library/test_write
 
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: |
+            any::ggplot2
+            any::BiocManager
+            any::devtools
+          upgrade: 'TRUE'
+          needs: check
+
+      - name: Install R packages
+        run: |
+          Rscript -e "
+          Sys.setenv(GITHUB_PAT='${{ secrets.GITHUB_TOKEN }}')
+          
+          BiocManager::install(version='3.22')
+          BiocManager::install('limma')
+          
+          install.packages('Seurat')
+          BiocManager::install('h5mread')
+          BiocManager::install('HDF5Array')
+          BiocManager::install('glmGamPoi')
+          install.packages('BPCells', repos=c('https://bnprks.r-universe.dev', 'https://cloud.r-project.org'))
+          install.packages('presto', repos=c('https://satijalab.r-universe.dev', 'https://cloud.r-project.org'))
+          BiocManager::install('GenomeInfoDb')
+          BiocManager::install('Rsamtools')
+          install.packages('Signac')
+          devtools::install_github('satijalab/seurat-data', auth_token=Sys.getenv('GITHUB_PAT'))
+          devtools::install_github('satijalab/azimuth', auth_token=Sys.getenv('GITHUB_PAT'))
+          install.packages('R.utils')
+          devtools::install_github('satijalab/seurat-wrappers', auth_token=Sys.getenv('GITHUB_PAT'))
+          install.packages('SoupX')
+          BiocManager::install('plger/scDblFinder')
+          devtools::install_github('chris-mcginnis-ucsf/DoubletFinder', auth_token=Sys.getenv('GITHUB_PAT'))
+          "
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install Python packages
+        run: |
+          pip install mkdocs-material
+          pip install mkdocs-git-revision-date-localized-plugin
+          pip install mkdocs-git-authors-plugin
+          pip install mkdocs-git-committers-plugin-2
+          pip install mkdocs-glightbox
+          pip install mkdocs-jupyter
+          pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install torch_geometric
+          pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-2.8.0+cpu.html
+          pip install scikit-image
+          pip install pymde
+          pip install scvi-tools
+          pip install louvain
+          pip install rpy2
+          pip install anndata2ri
+          pip install kneed
+          pip install rapids_singlecell
+          pip install celltypist
+          pip install torchdr
+          pip install intervaltree fbpca annoy
+          pip install patchworklib
+          pip install omicverse
+          pip install jupyterlab
+
+      - name: Increase swap space
+        run: |
+          # 增加交换空间以避免内存不足
+          sudo dd if=/dev/zero of=/swapfile bs=1G count=4
+          sudo chmod 600 /swapfile
+          sudo mkswap /swapfile
+          sudo swapon /swapfile
+          free -h
+
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      - uses: actions/cache@v4
+        with:
+          key: |
+            mkdocs-material-${{ env.cache_id }}
+            ${{ runner.os }}-r-${{ hashFiles('**/DESCRIPTION') }}-${{ hashFiles('**/renv.lock') }}
+          path: |
+            .cache
+            ~/library
+          restore-keys: |
+            mkdocs-material-
+            ${{ runner.os }}-r-
+
+      - run: mkdocs gh-deploy --force
