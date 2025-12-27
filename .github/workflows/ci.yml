@@ -11,7 +11,6 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: "true"
-      R_CRAN_MIRROR: https://mirrors.tuna.tsinghua.edu.cn/CRAN
       R_BIOC_MIRROR: https://mirrors.tuna.tsinghua.edu.cn/bioconductor
 
     steps:
@@ -32,83 +31,15 @@ jobs:
         with:
           r-version: 'latest'
           rtools-version: ''
+          cran: https://mirrors.tuna.tsinghua.edu.cn/CRAN
 
-      - uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          extra-packages: |
-            any::ggplot2
-            any::BiocManager
-            any::devtools
-          upgrade: 'TRUE'
-          needs: check
-
-      - name: Install R packages
+      - name: Change permissions of system R library
         run: |
-          Rscript -e "
-          Sys.setenv(GITHUB_PAT='${{ secrets.GITHUB_TOKEN }}')
-          
-          BiocManager::install(version='3.22')
-          BiocManager::install('limma')
-          
-          install.packages('Seurat')
-          BiocManager::install('h5mread')
-          BiocManager::install('HDF5Array')
-          BiocManager::install('glmGamPoi')
-          install.packages('BPCells', repos=c('https://bnprks.r-universe.dev', 'https://cloud.r-project.org'))
-          install.packages('presto', repos=c('https://satijalab.r-universe.dev', 'https://cloud.r-project.org'))
-          BiocManager::install('GenomeInfoDb')
-          BiocManager::install('Rsamtools')
-          install.packages('Signac')
-          devtools::install_github('satijalab/seurat-data', auth_token=Sys.getenv('GITHUB_PAT'))
-          devtools::install_github('satijalab/azimuth', auth_token=Sys.getenv('GITHUB_PAT'))
-          install.packages('R.utils')
-          devtools::install_github('satijalab/seurat-wrappers', auth_token=Sys.getenv('GITHUB_PAT'))
-          install.packages('SoupX')
-          BiocManager::install('plger/scDblFinder')
-          devtools::install_github('chris-mcginnis-ucsf/DoubletFinder', auth_token=Sys.getenv('GITHUB_PAT'))
-          "
+          # 检查当前权限
+          ls -la /opt/R/4.5.2/lib/R/library
+          # 给 R 库目录添加写权限
+          sudo chmod -R a+w /opt/R/4.5.2/lib/R/library
+          # 验证权限
+          ls -la /opt/R/4.5.2/lib/R/library
+          touch /opt/R/4.5.2/lib/R/library/test_write && echo "✓ Write test successful" && rm /opt/R/4.5.2/lib/R/library/test_write
 
-      - name: Install Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-      - name: Install Python packages
-        run: |
-          pip install mkdocs-material
-          pip install mkdocs-git-revision-date-localized-plugin
-          pip install mkdocs-git-authors-plugin
-          pip install mkdocs-git-committers-plugin-2
-          pip install mkdocs-glightbox
-          pip install mkdocs-jupyter
-          pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
-          pip install torch_geometric
-          pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-2.8.0+cpu.html
-          pip install scikit-image
-          pip install pymde
-          pip install scvi-tools
-          pip install louvain
-          pip install rpy2
-          pip install anndata2ri
-          pip install kneed
-          pip install rapids_singlecell
-          pip install celltypist
-          pip install torchdr
-          pip install intervaltree fbpca annoy
-          pip install patchworklib
-          pip install omicverse
-          pip install jupyterlab
-
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-      - uses: actions/cache@v4
-        with:
-          key: |
-            mkdocs-material-${{ env.cache_id }}
-            ${{ runner.os }}-r-${{ hashFiles('**/DESCRIPTION') }}-${{ hashFiles('**/renv.lock') }}
-          path: |
-            .cache
-            ~/library
-          restore-keys: |
-            mkdocs-material-
-            ${{ runner.os }}-r-
-
-      - run: mkdocs gh-deploy --force
