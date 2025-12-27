@@ -112,15 +112,11 @@ jobs:
           key: |
             mkdocs-material-${{ env.cache_id }}
             ${{ runner.os }}-r-${{ hashFiles('**/DESCRIPTION') }}-${{ hashFiles('**/renv.lock') }}
-            ${{ runner.os }}-python-${{ hashFiles('requirements.txt') }}-${{ hashFiles('Pipfile.lock') }}
           path: |
             .cache
             /opt/R/4.5.2/lib/R/library
-            ~/.cache/pip
-            ~/.local/lib/python3.10/site-packages
           restore-keys: |
             mkdocs-material-
             ${{ runner.os }}-r-
-            ${{ runner.os }}-python-
 
       - run: mkdocs gh-deploy --force
