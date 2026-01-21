@@ -37,7 +37,7 @@ nav:
       - math: Python基础/标准库/math.md
   - Python数据分析:
     - Numpy:
-      - 数组的概念及创建: Python数据分析/Numpy/数组的概念及创建.md
+      - 数组的概念及创建: Python数据分析/Numpy/数组的概念及创建.ipynb
       - 数组的操作: Python数据分析/Numpy/数组的操作.md
       - 矩阵的创建及操作: Python数据分析/Numpy/矩阵的创建及操作.md
       - 常用函数: Python数据分析/Numpy/常用函数.md
