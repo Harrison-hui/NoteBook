@@ -1,0 +1,3746 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Harrison">
+      
+      
+        <link rel="canonical" href="https://Harrison-hui.github.io/NoteBook/Python%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA/">
+      
+      
+      
+        <link rel="next" href="../%E6%96%87%E6%9C%AC%E4%B8%8E%E5%AD%97%E7%AC%A6/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>数的表示 - BioMed NoteBook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="BioMed NoteBook" class="md-header__button md-logo" aria-label="BioMed NoteBook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BioMed NoteBook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              数的表示
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="开启亮模式" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="开启亮模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple" aria-label="开启暗模式" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="开启暗模式" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple" aria-label="开启系统偏好模式" type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="开启系统偏好模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Harrison-hui/NoteBook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    Harrison-hui/NoteBook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Python基础
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Numpy/%E6%95%B0%E7%BB%84%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%88%9B%E5%BB%BA/" class="md-tabs__link">
+          
+  
+  
+  Python数据分析
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="BioMed NoteBook" class="md-nav__button md-logo" aria-label="BioMed NoteBook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    BioMed NoteBook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Harrison-hui/NoteBook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    Harrison-hui/NoteBook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python基础
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机组成原理
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算机组成原理
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数的表示
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%96%87%E6%9C%AC%E4%B8%8E%E5%AD%97%E7%AC%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文本与字符
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%9B%BE%E5%83%8F%E4%B8%8E%E8%A7%86%E9%A2%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图像与视频
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%A3%B0%E9%9F%B3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    声音
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2">
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    语法基础
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    语法基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://mp.weixin.qq.com/s/EZq_rzCbx_2xinvvVbKM-g" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    环境安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基本概念
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/%E5%86%85%E7%BD%AE%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    内置数据类型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/%E8%BF%90%E7%AE%97%E7%AC%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运算符
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    输入与输出
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数值类型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    字符串
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/%E5%88%97%E8%A1%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    列表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文件处理基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/%E7%B1%BB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    类
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    内置函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3">
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标准库
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    标准库
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%A0%87%E5%87%86%E5%BA%93/gzip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gzip
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%A0%87%E5%87%86%E5%BA%93/time/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    time
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%A0%87%E5%87%86%E5%BA%93/os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    os
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%A0%87%E5%87%86%E5%BA%93/string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    string
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%A0%87%E5%87%86%E5%BA%93/math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    math
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python数据分析
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python数据分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Numpy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Numpy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Numpy/%E6%95%B0%E7%BB%84%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%88%9B%E5%BB%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数组的概念及创建
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Numpy/%E6%95%B0%E7%BB%84%E7%9A%84%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数组的操作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Numpy/%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%9B%E5%BB%BA%E5%8F%8A%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    矩阵的创建及操作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Numpy/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    常用函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pandas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pandas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/Series%E5%AF%B9%E8%B1%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Series对象
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/DataFrame%E5%AF%B9%E8%B1%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DataFrame对象
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/%E9%80%9A%E7%94%A8%E5%87%BD%E6%95%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    通用函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python绘图
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python绘图
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%9F%BA%E7%A1%80/Patch%E7%B1%BB%E5%8F%8A%E5%85%B6%E5%AD%90%E7%B1%BB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patch类及其子类
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%9F%BA%E7%A1%80/%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%9F%BA%E7%A1%80/%E9%85%8D%E8%89%B2%EF%BC%88Color%E3%80%81Colormap%E3%80%81Palette%EF%BC%89%E4%B8%8E%E9%A2%9C%E8%89%B2%E6%9D%A1%EF%BC%88Colorbar%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    配色与颜色条
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%9F%BA%E7%A1%80/%E7%BB%98%E5%9B%BE%E9%85%8D%E7%BD%AE%EF%BC%88runtime%20configuration%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    绘图配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%9F%BA%E7%A1%80/%E5%9B%BE%E5%BD%A2%EF%BC%88Figure%EF%BC%89%E3%80%81%E5%AD%90%E5%9B%BE%EF%BC%88Axes%EF%BC%89%E3%80%81%E5%AD%90%E5%9B%BE%E7%BB%84%EF%BC%88Subfigure%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图形、子图、子图组
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%9F%BA%E7%A1%80/%E5%9B%BE%E4%BE%8B%EF%BC%88Legend%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%9F%BA%E7%A1%80/%E7%BA%BF%EF%BC%88Line%EF%BC%89%E4%B8%8E%E6%A0%87%E8%AE%B0%EF%BC%88Marker%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线与标记
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%9F%BA%E7%A1%80/%E6%96%87%E6%9C%AC%EF%BC%88Text%EF%BC%89%E3%80%81%E6%B3%A8%E9%87%8A%EF%BC%88Annotate%EF%BC%89%E3%80%81%E6%A0%87%E9%A2%98%EF%BC%88Title%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文本、注释、标题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%9F%BA%E7%A1%80/%E5%9D%90%E6%A0%87%E8%BD%B4%EF%BC%88Axis%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    坐标轴
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%9F%BA%E7%A1%80/%E5%A1%AB%E5%85%85%EF%BC%88Fill%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    填充
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%9F%BA%E7%A1%80/%E5%B1%80%E9%83%A8%E6%94%BE%E5%A4%A7%EF%BC%88indicate_inset_zoom%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    局部放大
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    相关关系图
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    相关关系图
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E7%9B%B8%E5%85%B3%E5%85%B3%E7%B3%BB%E5%9B%BE/%E5%9F%BA%E7%A1%80%E7%BB%98%E5%9B%BE%E4%B8%8E%E6%8A%98%E7%BA%BF%E5%9B%BE%EF%BC%88plot%E3%80%81stairs%E3%80%81lineplot%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础绘图与折线图（plot、stairs、lineplot）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E7%9B%B8%E5%85%B3%E5%85%B3%E7%B3%BB%E5%9B%BE/%E6%95%A3%E7%82%B9%E5%9B%BE%EF%BC%88scatter%E3%80%81scatterplot%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    散点图（scatter、scatterplot）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E7%9B%B8%E5%85%B3%E5%85%B3%E7%B3%BB%E5%9B%BE/%E7%BB%BC%E5%90%88%EF%BC%88relplot%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    综合（relplot）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E7%9B%B8%E5%85%B3%E5%85%B3%E7%B3%BB%E5%9B%BE/%E9%85%8D%E5%AF%B9%E5%9B%BE%EF%BC%88pairplot%E3%80%81PairGrid%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    配对图（pairplot、PairGrid）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E7%9B%B8%E5%85%B3%E5%85%B3%E7%B3%BB%E5%9B%BE/%E8%81%94%E5%90%88%E5%9B%BE%EF%BC%88jointplot%E3%80%81JointGrid%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    联合图（jointplot、JointGrid）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分类关系图
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    分类关系图
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%88%86%E7%B1%BB%E5%85%B3%E7%B3%BB%E5%9B%BE/%E6%9F%B1%E7%8A%B6%E5%9B%BE%EF%BC%88bar%E3%80%81barh%E3%80%81barplot%E3%80%81countplot%EF%BC%89%E4%B8%8E%E7%82%B9%E5%9B%BE%EF%BC%88pointplot%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    柱状图（bar、barh、barplot、countplot）与点图（pointplot）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%88%86%E7%B1%BB%E5%85%B3%E7%B3%BB%E5%9B%BE/%E7%AE%B1%E7%BA%BF%E5%9B%BE%EF%BC%88boxplot%E3%80%81bxp%E3%80%81boxenplot%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    箱线图（boxplot、bxp、boxenplot）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%88%86%E7%B1%BB%E5%85%B3%E7%B3%BB%E5%9B%BE/%E5%B0%8F%E6%8F%90%E7%90%B4%E5%9B%BE%EF%BC%88violinplot%E3%80%81violin%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    小提琴图（violinplot、violin）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%88%86%E7%B1%BB%E5%85%B3%E7%B3%BB%E5%9B%BE/%E6%8A%96%E5%8A%A8%E6%95%A3%E7%82%B9%E5%9B%BE%EF%BC%88stripplot%EF%BC%89%E4%B8%8E%E8%9C%82%E7%BE%A4%E5%9B%BE%EF%BC%88swarmplot%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    抖动散点图（stripplot）与蜂群图（swarmplot）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%88%86%E7%B1%BB%E5%85%B3%E7%B3%BB%E5%9B%BE/%E7%BB%BC%E5%90%88%EF%BC%88catplot%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    综合（catplot）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%88%86%E7%B1%BB%E5%85%B3%E7%B3%BB%E5%9B%BE/%E9%A5%BC%E5%9B%BE%EF%BC%88pie%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    饼图（pie）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%88%86%E7%B1%BB%E5%85%B3%E7%B3%BB%E5%9B%BE/%E5%88%86%E7%BB%84%E6%98%BE%E8%91%97%E6%80%A7%E6%B3%A8%E9%87%8A%EF%BC%88statannotations%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分组显著性注释（statannotations）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_4">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_4" id="__nav_2_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分布关系图
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    分布关系图
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%88%86%E5%B8%83%E5%85%B3%E7%B3%BB%E5%9B%BE/%E7%9B%B4%E6%96%B9%E5%9B%BE%EF%BC%88hist%E3%80%81hist2d%E3%80%81histplot%EF%BC%89%E3%80%81%E6%A0%B8%E5%AF%86%E5%BA%A6%E5%9B%BE%EF%BC%88kdeplot%EF%BC%89%E3%80%81%E7%B4%AF%E8%AE%A1%E6%9B%B2%E7%BA%BF%E5%9B%BE%EF%BC%88ecdfplot%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    直方图（hist、hist2d、histplot）、核密度图（kdeplot）、累计曲线图（ecdfplot）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%88%86%E5%B8%83%E5%85%B3%E7%B3%BB%E5%9B%BE/%E8%BD%B4%E9%A1%BB%E5%9B%BE%EF%BC%88eventplot%E3%80%81rugplot%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    轴须图（eventplot、rugplot）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%88%86%E5%B8%83%E5%85%B3%E7%B3%BB%E5%9B%BE/%E7%BB%BC%E5%90%88%EF%BC%88displot%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    综合（displot）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_5">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_5" id="__nav_2_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    回归关系图
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    回归关系图
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E5%9B%9E%E5%BD%92%E5%85%B3%E7%B3%BB%E5%9B%BE/%E5%9B%9E%E5%BD%92%E5%85%B3%E7%B3%BB%E5%9B%BE%EF%BC%88regplot%E3%80%81lmplot%E3%80%81residplot%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    回归关系图（regplot、lmplot、residplot）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_6">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_6" id="__nav_2_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    热图
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    热图
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E7%83%AD%E5%9B%BE/%E7%83%AD%E5%9B%BE%EF%BC%88imshow%E3%80%81matshow%E3%80%81pcolor%E3%80%81pcolormesh%E3%80%81heatmap%E3%80%81clustermap%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    热图（imshow、matshow、pcolor、pcolormesh、heatmap、clustermap）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_7">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_7" id="__nav_2_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    茎状图
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    茎状图
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E8%8C%8E%E7%8A%B6%E5%9B%BE/%E8%8C%8E%E7%8A%B6%E5%9B%BE%EF%BC%88stem%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    茎状图（stem）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_8">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_8" id="__nav_2_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    森林图
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    森林图
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%BB%98%E5%9B%BE/%E6%A3%AE%E6%9E%97%E5%9B%BE/%E6%A3%AE%E6%9E%97%E5%9B%BE%EF%BC%88forestplot%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    森林图（forestplot）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation">
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Python基础
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    计算机组成原理
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/Harrison-hui/NoteBook/edit/master/docs/Python基础/计算机组成原理/数的表示.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Harrison-hui/NoteBook/raw/master/docs/Python基础/计算机组成原理/数的表示.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"></path></svg>
+    </a>
+  
+
+
+<h1 id="_1">数制（计数制）<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>多位数码的构成方式及从低位到高位的进位规则称为进位计数制，即进制，如十进制、二进制、八进制、十六进制等</p>
+<ol type="1">
+<li>
+<p>数码（数元）：数制中用来表示数据的数字符号</p>
+</li>
+<li>
+<p>基数（基）：数制所使用的数码个数，常用"R"表示，称为R进制。<strong>一般在右下标明或后加大写字母符号，十进制可省略</strong>。</p>
+</li>
+<li>
+<p>位权：数码在第i位上的权值，<strong>整数部分为<span class="arithmatex">\(R^{(i-1)}\)</span>, 小数部分为<span class="arithmatex">\(R^{-i}\)</span></strong></p>
+</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/fa2ff5a4-f0d4-4326-8fe4-8871cf9da55e/image.png?time=1747469700&amp;token=9f1b6a7ab9468589dcd00449b7bb362aa3f265f21d72207d83a28c9874a323bb&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/fa2ff5a4-f0d4-4326-8fe4-8871cf9da55e/image.png?time=1747469700&amp;token=9f1b6a7ab9468589dcd00449b7bb362aa3f265f21d72207d83a28c9874a323bb&amp;role=sharePaid"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/a67ee203-dc9a-47b7-8fa8-55a5df44dfdb/image.png?time=1747469700&amp;token=ed323d5150e9ccd9c78b2b6aa7b86f46a51a7f9f1fbe998b7eeb118e214aebc9&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/a67ee203-dc9a-47b7-8fa8-55a5df44dfdb/image.png?time=1747469700&amp;token=ed323d5150e9ccd9c78b2b6aa7b86f46a51a7f9f1fbe998b7eeb118e214aebc9&amp;role=sharePaid"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/68add016-1f49-46be-bb54-51c13c31ba28/image.png?time=1747469700&amp;token=d3f251515c5de44082695c044bcaf41c589f310514506501b9adb3f68cb021ac&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/68add016-1f49-46be-bb54-51c13c31ba28/image.png?time=1747469700&amp;token=d3f251515c5de44082695c044bcaf41c589f310514506501b9adb3f68cb021ac&amp;role=sharePaid"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/5b763ba8-97ff-44dd-b359-9b37acfe5991/image.png?time=1747469700&amp;token=8fd4746a67c4a70ad0d32be7f64aa3fce1c8b2ea0508b98e22816cb5d2d93630&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/5b763ba8-97ff-44dd-b359-9b37acfe5991/image.png?time=1747469700&amp;token=8fd4746a67c4a70ad0d32be7f64aa3fce1c8b2ea0508b98e22816cb5d2d93630&amp;role=sharePaid"></a></p>
+<table>
+<thead>
+<tr>
+<th>数制</th>
+<th>符号</th>
+<th>基数R</th>
+<th>数码</th>
+<th>位权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>十进制</td>
+<td>D (Decimal)</td>
+<td>10</td>
+<td>0, 1, 2, 3, 4, 5, 6, 7, 8, 9</td>
+<td><span class="arithmatex">\(10^{(i-1)}\)</span> 或 <span class="arithmatex">\(10^{-i}\)</span></td>
+</tr>
+<tr>
+<td>二进制</td>
+<td>B (Binary)</td>
+<td>2</td>
+<td>0, 1</td>
+<td><span class="arithmatex">\(2^{(i-1)}\)</span> 或 <span class="arithmatex">\(2^{-i}\)</span></td>
+</tr>
+<tr>
+<td>八进制</td>
+<td>O (Octonary)或Q</td>
+<td>8</td>
+<td>0, 1, 2, 3, 4, 5, 6, 7</td>
+<td><span class="arithmatex">\(8^{(i-1)}\)</span> 或 <span class="arithmatex">\(8^{-i}\)</span></td>
+</tr>
+<tr>
+<td>十六进制</td>
+<td>H (Hexadecimal)</td>
+<td>16</td>
+<td>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F</td>
+<td><span class="arithmatex">\(16^{(i-1)}\)</span> 或 <span class="arithmatex">\(16^{-i}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/7af9a733-5e18-4ee1-b46c-7befa0ddc1e2/image.png?time=1747469700&amp;token=789a7d54afd7d706389884aea95c64b449c4a33b7c69c048a4cc1ccf3ec6a5f5&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/7af9a733-5e18-4ee1-b46c-7befa0ddc1e2/image.png?time=1747469700&amp;token=789a7d54afd7d706389884aea95c64b449c4a33b7c69c048a4cc1ccf3ec6a5f5&amp;role=sharePaid"></a></p>
+<blockquote>
+<ol type="1">
+<li><strong>计算机内部所有数据、文件或指令的传送、储存、处理都是通过二进制码进行的</strong>
+    (1)物理上容易实现；
+    (2)运算简单；
+    (3)可靠性高；
+    (4)易于实现逻辑运算。</li>
+<li><strong>在计算机程序编写中，为了书写方便，会采用十六进制</strong></li>
+</ol>
+</blockquote>
+<h1 id="_2">进制转换<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
+<blockquote>
+<p>可参考进制转换工具及文章网站：<a href="https://www.sojson.com/hexconvert.html">在线进制转换 | 进制转换器 — 在线工具 (sojson.com)
+</a>可自行练习，通过此工具验证自己的计算结果</p>
+</blockquote>
+<h2 id="r">十进制转R进制<a class="headerlink" href="#r" title="Permanent link">¶</a></h2>
+<p>整数部分：<strong>除R倒序取余</strong>，直至商为0</p>
+<p>小数部分：<strong>乘R顺序取整</strong>，直至小数部分为0或满足精度（可能较长，根据精度取舍）</p>
+<p>结果 = 整数部分 + 小数部分</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/c62c8e91-95b5-4a9f-af35-04627e0b0e44/image.png?time=1747469700&amp;token=4eb9d7f1d35e39281047ec956bb739853b7403086049888fc2a8da4a1ef8c83a&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/c62c8e91-95b5-4a9f-af35-04627e0b0e44/image.png?time=1747469700&amp;token=4eb9d7f1d35e39281047ec956bb739853b7403086049888fc2a8da4a1ef8c83a&amp;role=sharePaid"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/faaf7d6f-ef76-4496-b878-7aa87a2c706c/image.png?time=1747469700&amp;token=e11eac576747111d64403acbdf1825553caf6f411729618b95b2701e039e3494&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/faaf7d6f-ef76-4496-b878-7aa87a2c706c/image.png?time=1747469700&amp;token=e11eac576747111d64403acbdf1825553caf6f411729618b95b2701e039e3494&amp;role=sharePaid"></a></p>
+<h2 id="r_1">R进制转十进制<a class="headerlink" href="#r_1" title="Permanent link">¶</a></h2>
+<p>每一位进制数乘以位权后相加（<strong>按权展开、相加</strong>)</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/b8980dd4-083e-48ff-a2f3-36894fb7b945/image.png?time=1747469700&amp;token=62b791bc4c404f21d141e08b9470edfd9dcbd8711d4438dc962fbe5b03351be6&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/b8980dd4-083e-48ff-a2f3-36894fb7b945/image.png?time=1747469700&amp;token=62b791bc4c404f21d141e08b9470edfd9dcbd8711d4438dc962fbe5b03351be6&amp;role=sharePaid"></a></p>
+<h2 id="_3">二进制转八、十六进制<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>整数部分从右往左，小数部分从左往右，转八进制以3位二进制数为一组（<strong>取三合一</strong>），转十六进制以4位二进制数为一组（<strong>取四合一</strong>）；不足时，整数部分最高位补0，小数部分最低位补0（保证补0后位权不变）。将每组二进制数转化为十进制，每组十进制数组合在一起即为对应进制数</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/d682b374-5aaf-46fc-8813-064c2cd87015/image.png?time=1747469700&amp;token=57dd2b0525e2c7f322d332d914452142c7fb93a204c226d10a090db18e6e904d&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/d682b374-5aaf-46fc-8813-064c2cd87015/image.png?time=1747469700&amp;token=57dd2b0525e2c7f322d332d914452142c7fb93a204c226d10a090db18e6e904d&amp;role=sharePaid"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/63fafddc-0c36-4ca6-95db-6af6eb1bed71/image.png?time=1747469700&amp;token=7393e8f9cb52d06ca340527ab71bbb84a0db06e9a70edf8088562adf6a0c5405&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/63fafddc-0c36-4ca6-95db-6af6eb1bed71/image.png?time=1747469700&amp;token=7393e8f9cb52d06ca340527ab71bbb84a0db06e9a70edf8088562adf6a0c5405&amp;role=sharePaid"></a></p>
+<h2 id="_4">八、十六进制转二进制<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<p>将每位进制数以十进制转二进制，八进制每位数转为3位二进制数（<strong>取一分三</strong>），十六进制每位数转为4位二进制数（<strong>取一分四</strong>），不足左边补0（保证补0后各位权不变），组合在一起即为对应二进制数</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/d1cb9c0e-6dab-417c-a1bc-63cd1984b955/image.png?time=1747469700&amp;token=10c85390fc39cf80e5b692e8dbf5c8d327231abf4f240f1326a89be8bbdc2860&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/d1cb9c0e-6dab-417c-a1bc-63cd1984b955/image.png?time=1747469700&amp;token=10c85390fc39cf80e5b692e8dbf5c8d327231abf4f240f1326a89be8bbdc2860&amp;role=sharePaid"></a></p>
+<h2 id="_5">八进制与十六进制互转<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<ol type="1">
+<li>
+<p>八进制/十六进制 → 十进制 → 十六进制/八进制</p>
+</li>
+<li>
+<p>八进制/十六进制 → 二进制 → 十六进制/八进制</p>
+</li>
+</ol>
+<h1 id="_6">进制运算<a class="headerlink" href="#_6" title="Permanent link">¶</a></h1>
+<h2 id="_7">算术运算<a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
+<p><strong>逢R进1，借1当R</strong>（参考十进制）</p>
+<ol start="3" type="1">
+<li>加法</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/94bfa43c-a24e-4714-880a-b05feae6b823/image.png?time=1747469700&amp;token=3f361b4b9564c4e8e964e9dd423c66e9bef13db5ed79dfd72376a31a5625154e&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/94bfa43c-a24e-4714-880a-b05feae6b823/image.png?time=1747469700&amp;token=3f361b4b9564c4e8e964e9dd423c66e9bef13db5ed79dfd72376a31a5625154e&amp;role=sharePaid"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/55b91ffc-a617-40c2-9442-927f5a49d0dd/image.png?time=1747469700&amp;token=77c68993c9ac3fb5c98564acc2524bbd60ee1551c72319f64dce263eb7f826a5&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/55b91ffc-a617-40c2-9442-927f5a49d0dd/image.png?time=1747469700&amp;token=77c68993c9ac3fb5c98564acc2524bbd60ee1551c72319f64dce263eb7f826a5&amp;role=sharePaid"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/0e80c5ea-6bfc-450b-a6af-42fdbcb215e0/image.png?time=1747469700&amp;token=25cd3dd7d72dd90e625c75f2adc45d327d7a3aeb622cdd7c382cd1bd7f4a9538&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/0e80c5ea-6bfc-450b-a6af-42fdbcb215e0/image.png?time=1747469700&amp;token=25cd3dd7d72dd90e625c75f2adc45d327d7a3aeb622cdd7c382cd1bd7f4a9538&amp;role=sharePaid"></a></p>
+<ol start="4" type="1">
+<li>减法</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/49493985-494e-4eea-ade4-4a8b6800a1d7/image.png?time=1747469700&amp;token=42b542de5e1b8fc8fb7093ccea3dc7dacb2bc1ed53c129330c3fa3c43cf75fe3&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/49493985-494e-4eea-ade4-4a8b6800a1d7/image.png?time=1747469700&amp;token=42b542de5e1b8fc8fb7093ccea3dc7dacb2bc1ed53c129330c3fa3c43cf75fe3&amp;role=sharePaid"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/8fb6cac0-bd3d-4239-a63d-f4967e9e62fe/image.png?time=1747469700&amp;token=62283cfe93ca0a408372a48650717b6dce0c30237506266697f4c96f78c51916&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/8fb6cac0-bd3d-4239-a63d-f4967e9e62fe/image.png?time=1747469700&amp;token=62283cfe93ca0a408372a48650717b6dce0c30237506266697f4c96f78c51916&amp;role=sharePaid"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/2ace12b1-6e9e-493f-abfb-b1552dfe16de/image.png?time=1747469700&amp;token=cee25c0f839ad413419e9f79393cbaaa52302096e3e5586a643667d007bc0558&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/2ace12b1-6e9e-493f-abfb-b1552dfe16de/image.png?time=1747469700&amp;token=cee25c0f839ad413419e9f79393cbaaa52302096e3e5586a643667d007bc0558&amp;role=sharePaid"></a></p>
+<ol start="5" type="1">
+<li>乘法</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/b66cf483-ea44-4338-bdf4-6224e262e4ff/image.png?time=1747469700&amp;token=4bd767ce051d9ae080a20e8ddae282aa9a38923dabdfd6580e96b663107ebd27&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/b66cf483-ea44-4338-bdf4-6224e262e4ff/image.png?time=1747469700&amp;token=4bd767ce051d9ae080a20e8ddae282aa9a38923dabdfd6580e96b663107ebd27&amp;role=sharePaid"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/dced1528-0a64-4578-bdb9-24241d30151e/image.png?time=1747469700&amp;token=a4a9496c0348280921c003626903da9413269ae8cd133afbc49697344d23602b&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/dced1528-0a64-4578-bdb9-24241d30151e/image.png?time=1747469700&amp;token=a4a9496c0348280921c003626903da9413269ae8cd133afbc49697344d23602b&amp;role=sharePaid"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/dc4ea4a3-a443-4d6b-bf62-4bf02b4d3c5f/image.png?time=1747469700&amp;token=8c581475676ebc18b8c7a68822ed1c8689dc5aa1b395486eb9781404967ff317&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/dc4ea4a3-a443-4d6b-bf62-4bf02b4d3c5f/image.png?time=1747469700&amp;token=8c581475676ebc18b8c7a68822ed1c8689dc5aa1b395486eb9781404967ff317&amp;role=sharePaid"></a></p>
+<ol start="6" type="1">
+<li>除法</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/98252816-20b4-4392-9c15-a984432ea4e9/image.png?time=1747469700&amp;token=b2a34c458efa57d1f0ab5960e94269a7a81eabc2cee65c64d1c199dd0a9e979b&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/98252816-20b4-4392-9c15-a984432ea4e9/image.png?time=1747469700&amp;token=b2a34c458efa57d1f0ab5960e94269a7a81eabc2cee65c64d1c199dd0a9e979b&amp;role=sharePaid"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/a8ce3a51-ac90-4598-bf8f-cf8b7be3f066/image.png?time=1747469700&amp;token=4a35aa5f8fd754ff922a8551a856957b5416dcd94560148de38dc79a0a694610&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/a8ce3a51-ac90-4598-bf8f-cf8b7be3f066/image.png?time=1747469700&amp;token=4a35aa5f8fd754ff922a8551a856957b5416dcd94560148de38dc79a0a694610&amp;role=sharePaid"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/926176ae-1ae5-4a94-9b72-4d43e7326ccc/image.png?time=1747469700&amp;token=76eecf0200216af0301ec44c37ec45772a3d12540fd623da277c0b1219a69b69&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/926176ae-1ae5-4a94-9b72-4d43e7326ccc/image.png?time=1747469700&amp;token=76eecf0200216af0301ec44c37ec45772a3d12540fd623da277c0b1219a69b69&amp;role=sharePaid"></a></p>
+<h2 id="_8">逻辑运算<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
+<ol start="7" type="1">
+<li><strong>逻辑与、逻辑乘（&amp;，and，^）：有0即为0，否则为1</strong></li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/2ba886cf-57ef-49af-a424-fa98f1c9379c/image.png?time=1747469700&amp;token=8b4c0c0c6d6fdd85e9f0c3826d0e14ca873fb902b7cf95ca3bed0cb8e5a892d0&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/2ba886cf-57ef-49af-a424-fa98f1c9379c/image.png?time=1747469700&amp;token=8b4c0c0c6d6fdd85e9f0c3826d0e14ca873fb902b7cf95ca3bed0cb8e5a892d0&amp;role=sharePaid"></a></p>
+<ol start="8" type="1">
+<li><strong>逻辑或、逻辑加（|，or，v）：有1即为1，否则为0</strong></li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/35cb51f3-4fca-4b3f-98f5-6d98c88bc13e/image.png?time=1747469700&amp;token=80a1fd5d9014ff7f998c925355c722684be0c3545899be41845fabbfe46540f8&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/35cb51f3-4fca-4b3f-98f5-6d98c88bc13e/image.png?time=1747469700&amp;token=80a1fd5d9014ff7f998c925355c722684be0c3545899be41845fabbfe46540f8&amp;role=sharePaid"></a></p>
+<ol start="9" type="1">
+<li><strong>逻辑非、取反（!，not）：<a class="magiclink magiclink-github magiclink-pull" href="https://github.com/Harrison-hui/NoteBook/pull/1" title="GitHub Pull Request: Harrison-hui/NoteBook #1">#1</a> = 0, !0= 1</strong></li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/3134dd79-3a35-48d2-ab42-9c72a47d1c3d/image.png?time=1747469700&amp;token=03fd52e5fe0a891f31c721cedaaa35f2f565abd2134b517e4de68b354d1e72a9&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/3134dd79-3a35-48d2-ab42-9c72a47d1c3d/image.png?time=1747469700&amp;token=03fd52e5fe0a891f31c721cedaaa35f2f565abd2134b517e4de68b354d1e72a9&amp;role=sharePaid"></a></p>
+<ol start="10" type="1">
+<li><strong>逻辑异或（^，xor）：同0异1</strong></li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/13f59b54-670e-40af-9325-d8c187a870ab/image.png?time=1747469700&amp;token=ccc06cf9cf6072863e7e186b289ca1cdcdaf52e6e27ccd1f2790bd4b3c9fad98&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/13f59b54-670e-40af-9325-d8c187a870ab/image.png?time=1747469700&amp;token=ccc06cf9cf6072863e7e186b289ca1cdcdaf52e6e27ccd1f2790bd4b3c9fad98&amp;role=sharePaid"></a></p>
+<ol start="11" type="1">
+<li>逻辑同或（xnor）：同1异0，编程语言无该运算，通过异或实现</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/f8f7af58-c75b-45e3-b723-4c15d2b502ab/image.png?time=1747469700&amp;token=55604f396f4259ae957119ca6b01cb4ab64a58ab2336c104d9fda114b6288860&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/f8f7af58-c75b-45e3-b723-4c15d2b502ab/image.png?time=1747469700&amp;token=55604f396f4259ae957119ca6b01cb4ab64a58ab2336c104d9fda114b6288860&amp;role=sharePaid"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/a8085c47-ba6d-48c2-8d87-3f8c0456c350/image.png?time=1747469700&amp;token=6825a9db457ef91910520d2a0d409895ccb66c6f44d28b55d01dd64f3e9d37ab&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/a8085c47-ba6d-48c2-8d87-3f8c0456c350/image.png?time=1747469700&amp;token=6825a9db457ef91910520d2a0d409895ccb66c6f44d28b55d01dd64f3e9d37ab&amp;role=sharePaid"></a></p>
+<h1 id="_9">数据单位<a class="headerlink" href="#_9" title="Permanent link">¶</a></h1>
+<ol start="12" type="1">
+<li>
+<p>二进位、位、比特（b，bit）：一个二进制位，只有两个取值0和1，无大小之分
+<strong>存储数据的最小单位、组成数字信息的最小单位</strong>
+如 1011 为4 位或4 bit、4 b</p>
+</li>
+<li>
+<p>位模式（位流）：多个位组成一个位模式
+如 1011 为长度为4的位模式</p>
+</li>
+<li>
+<p>字节（B，Byte）：长度为8的位模式
+<strong>存储信息的基本单位、数据处理的最小单位</strong>
+如 10111010 为1字节或1 B
+<strong>1 B = 8 bit</strong></p>
+</li>
+<li>
+<p>字：是CPU一次处理的数据，通常由**一个字节或若干个字节**组成
+字长：计算机一次能处理的实际位数长度，衡量计算性能
+如 计算机的32位和64位处理器，64位处理器一次提取8个字节的数据，而32位则一次提取4个字节的数据</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>进制</th>
+<th>应用</th>
+<th>单位换算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>二进制</strong></td>
+<td><strong>内存</strong>、<strong>外存（操作系统显示）</strong>、cache、半导体存储器芯片、文件和文件夹大小</td>
+<td>1 KB（千字节） = <span class="arithmatex">\(2^{10}\)</span> B = 1024 B</td>
+</tr>
+<tr>
+<td>1 MB（兆字节、兆） = <span class="arithmatex">\(2^{20}\)</span> B = 1024 KB</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1 GB（吉字节、千兆） = <span class="arithmatex">\(2^{30}\)</span> B = 1024 MB</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1 TB（太字节） = <span class="arithmatex">\(2^{40}\)</span> B = 1024 GB</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PB（拍字节）、EB（艾字节）、ZB（泽字节）、YB（尧字节）、BB</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>十进制</strong></td>
+<td><strong>外存（厂商标注）</strong></td>
+<td>1 KB（千字节） = <span class="arithmatex">\(10^{3}\)</span> B = 1000 B</td>
+</tr>
+<tr>
+<td>1 MB（兆字节、兆） = <span class="arithmatex">\(10^{6}\)</span> B = 1000 KB</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1 GB（吉字节、千兆） = <span class="arithmatex">\(10^{9}\)</span> B = 1000 MB</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1 TB（太字节） = <span class="arithmatex">\(10^{12}\)</span> B = 1000 GB</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PB（拍字节）、EB（艾字节）、ZB（泽字节）、YB（尧字节）、BB</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>频率（Hz）</strong></td>
+<td>1 KHz = $10^{3} $ Hz = 1000 Hz</td>
+</tr>
+<tr>
+<td>1 MHz = <span class="arithmatex">\(10^{6}\)</span> Hz = 1000 KHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1 GHz = <span class="arithmatex">\(10^{9}\)</span> Hz = 1000 MHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>传输速率（b/s、bps）</strong></td>
+<td>1 Kb/s = <span class="arithmatex">\(10^{3}\)</span> b/s = 1000 b/s</td>
+</tr>
+<tr>
+<td>1 Mb/s = <span class="arithmatex">\(10^{6}\)</span> b/s = 1000 Kb/s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1 Gb/s = <span class="arithmatex">\(10^{9}\)</span> b/s = 1000 Mb/s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1 Tb/s = <span class="arithmatex">\(10^{12}\)</span> b/s = 1000 Gb/s</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="_10">整数表示法<a class="headerlink" href="#_10" title="Permanent link">¶</a></h1>
+<p>假设一个字长为8的计算机，即只能处理8位二进制数的运算。已知**计算机只有加法器，没有减法器，减法只能通过加法实现**，即5 - 5 = 0，计算机只能通过5 +（-5）= 0实现。</p>
+<p>5的二进制表示为<span class="arithmatex">\(101_{(2)}\)</span>，若直接将其存入计算机中，则为0000 0101，此即无符号整数原码。为了存储负数，首先提出了将**最高位作为符号位，以符号位为0代表正数，符号位为1代表负数**。因此，5的内部表示仍为0000 0101，而-5的内部表示则为1000 0101，此即带符号整数原码。此时若作运算：5 + (-5) = 0000 0101 + 1000 0101 = 1000 1010 = -10，与已知事实不符。</p>
+<p>后继提出了**反码，即原码符号位保持不变，非符号位取反**，但**正数的反码等于原码**。则5的反码仍为0000 0101，-5的反码为1111 1010。此时若作运算：5 + (-5) = 0000 0101 + 1111 1010 = 1111 1111，将结果再次转为原码: 1000 0000，即最终运算结果为-0，为非常规数。</p>
+<p>正是由于原码和反码用于运算存在错误，而且原码中0000 0000表示+0,  1000 0000表示-0，反码中0000 0000表示+0和 1111 1111表示-0，与常识不符，因此不适合使用原码和反码来存储和处理数据。</p>
+<p>最后提出了**补码，即反码+1**，但**正数的补码也等于原码**。则5的补码仍为0000 0101，而-5的补码为1111 1011。此时若做运算：5 + (-5) = 0000 0101 + 1111 1011 = 1 0000 0000，由于只能处理8位，所以最高位1溢出被忽略，结果为0000 0000，原码=补码，与事实相符。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/2c904f20-0977-4bfe-b9c6-812f6668c811/Screenshot_20230812_183557_tv.danmaku.bili_edit_35677075999764.jpg?time=1747469700&amp;token=1add681c1e9ff518cc04b348cd2a58ec5ae6dfb6096cdfa8938a9208c7e02328&amp;role=sharePaid" data-title="Screenshot_20230812_183557_tv.danmaku.bili_edit_35677075999764.jpg" data-desc-position="bottom"><img alt="Screenshot_20230812_183557_tv.danmaku.bili_edit_35677075999764.jpg" src="https://tc-cdn.flowus.cn/oss/2c904f20-0977-4bfe-b9c6-812f6668c811/Screenshot_20230812_183557_tv.danmaku.bili_edit_35677075999764.jpg?time=1747469700&amp;token=1add681c1e9ff518cc04b348cd2a58ec5ae6dfb6096cdfa8938a9208c7e02328&amp;role=sharePaid"></a></p>
+<p>所以，目前**计算机内部都是以补码的形式存储和处理数据，但最终结果是以原码形式呈现**，即运算通过补码进行，得到的结果也是补码，但最终输出需要将补码转换为原码才是我们所能理解的计算结果。</p>
+<p>|
+    二进制
+|
+ 无符号数|                               带符号数||||
+|-|-|-|-|-|-|
+|||作为原码|作为反码|作为补码|作为移码|
+|<strong>0000 0000</strong>|0|<strong>+0</strong>|<strong>+0</strong>|0|-128|
+|0000 0001|1|1|1|1|-127|
+|......|......|......|......|......|......|
+|0111 1111|127|127|127|127|-1|
+|<strong>1000 0000</strong>|128|<strong>-0</strong>|-127|<strong>-128</strong>|0|
+|1000 0001|129|-1|-126|-127|1|
+|......|......|......|......|......|......|
+|1111 1110|254|-126|-1|-2|126|
+|<strong>1111 1111</strong>|255|-127|<strong>-0</strong>|-1|127|</p>
+<h2 id="_11">无符号整数<a class="headerlink" href="#_11" title="Permanent link">¶</a></h2>
+<p><strong>无符号位</strong>，每一位都用来存储数据，空位补0，一共可表示<span class="arithmatex">\(2^{n}\)</span>个无符号整数，范围为**0 ~ <span class="arithmatex">\(2^{n}-1\)</span>**，若该无符号整数超过了该范围，高位将会发生溢出，仅保留低位的n位</p>
+<p>8位无符号整数的范围为 0000 0000 ~ 1111 1111，代表0 ~255，若用来表示256（1 0000 0000），则最高位溢出无法处理，只保留0000 0000，最终表示0（类似于0～255的钟表，过了255重新循环）</p>
+<h2 id="_12">带符号整数（定点整数）<a class="headerlink" href="#_12" title="Permanent link">¶</a></h2>
+<p>小数点位置默认固定隐含在最低位右侧，实际并不储存，用于表示**纯整数**</p>
+<p>（注：下图中n代表的是数值部分的位数，不是字长）</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/f2ca7284-f4de-4259-9fe9-4c47662b4d37/image.png?time=1747469700&amp;token=0ad82755ce00d8944f2ba4726e2b3fbb00e64b280515aef361e7004e6e58a244&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/f2ca7284-f4de-4259-9fe9-4c47662b4d37/image.png?time=1747469700&amp;token=0ad82755ce00d8944f2ba4726e2b3fbb00e64b280515aef361e7004e6e58a244&amp;role=sharePaid"></a></p>
+<blockquote>
+<p>真值：带符号的数，一般书写表示的数</p>
+</blockquote>
+<p>机器数（机器码）：符号数字化的数，计算机内部编码的数，通过原码、反码、补码、移码等表示。<strong>最高位为符号位，1表示负数，0表示正数</strong>，其余n-1个存储位用来存储数据，<strong>整数高位补0，小数低位补0</strong>，共可表示<span class="arithmatex">\(2\times2^{n-1} = 2^{n}\)</span>个有符号整数</p>
+<p>如：
++10 → 真值<span class="arithmatex">\(x\)</span>：+1010 → 原码<span class="arithmatex">\([x]_{原}\)</span>：0000 1010
+- 10 → 真值<span class="arithmatex">\(x\)</span>：- 1010 → 原码<span class="arithmatex">\([x]_{原}\)</span>：1000 1010</p>
+<ol type="1">
+<li>原码
+代表的范围为 ****<span class="arithmatex">\(-(2^{n-1} -1)\)</span> <strong>~</strong> <span class="arithmatex">\(\pm0\)</span> <strong>~</strong> <span class="arithmatex">\((2^{n-1} - 1)\)</span>，8位有符号整数原码范围为 11111111 ~ 100000000 ~ 00000000 ~ 01111111（-127 ~ ±0 ~ +127）
++10 → <span class="arithmatex">\(x\)</span>：+1010 → <span class="arithmatex">\([x]_{原}\)</span> = <span class="arithmatex">\(x\)</span> = 0000 1010</li>
+</ol>
+<ul>
+<li>10 → <span class="arithmatex">\(x\)</span>：- 1010 → <span class="arithmatex">\([x]_{原}\)</span> = <span class="arithmatex">\(2^{7} + \mid -1010 \mid\)</span>  = 1000 0000 + 1010 = 1000 1010</li>
+</ul>
+<p><span class="arithmatex">\([x]_{原} = \begin{cases}x &amp; 2^{n-1}&gt;x\geq 0\\2^{n-1}-x = 2^{n-1}+\mid x \mid  &amp; 0 \geq x &gt; -2^{n-1}\end{cases}\)</span></p>
+<ol start="2" type="1">
+<li>反码
+代表的范围为 <strong><span class="arithmatex">\(-(2^{n-1} -1)\)</span> ~ <span class="arithmatex">\(\pm0\)</span> ~ <span class="arithmatex">\((2^{n-1} - 1)\)</span></strong>，8位有符号整数反码范围为1000 0000 ~ 1111 1111 ~ 0000 0000 ~ 0111 1111（-127 ~ ±0 ~+127）
++10 →  <span class="arithmatex">\([x]_{原}\)</span> = 0000 1010 → <span class="arithmatex">\([x]_{反} = [x]_{原}\)</span> = 0000 1010</li>
+</ol>
+<ul>
+<li>10 →  <span class="arithmatex">\([x]_{原}\)</span> = 1000 1010 → <span class="arithmatex">\([x]_{反} =\)</span> 1111 0101</li>
+<li>10 → <span class="arithmatex">\(x\)</span> = -1010 → <span class="arithmatex">\([x]_{反}\)</span> = <span class="arithmatex">\((2^{8}-1)\)</span> - 1010 = 1111 1111 - 1010 = 1111 0101</li>
+</ul>
+<ol type="1">
+<li>
+<p><strong>正数：反码 = 原码</strong></p>
+</li>
+<li>
+<p><strong>负数：符号位不变，非符号位取反 (= 1111 1111 + <span class="arithmatex">\(x\)</span>)</strong></p>
+</li>
+</ol>
+<p><span class="arithmatex">\([x]_{补} = \begin{cases}x &amp; 2^{n-1}&gt;x\geq 0\\(2^{n}-1)+x = (2^{n}-1)- \mid x \mid &amp; 0 \geq x &gt; -2^{n-1}\end{cases}\)</span></p>
+<ol start="3" type="1">
+<li>补码
+代表的范围为**<span class="arithmatex">\(-2^{n-1}\sim(2^{n-1}-1)\)</span><strong>，8位有符号整数补码范围为1000 0000 ~ 1111 1111 ~ 0000 0000 ~ 0111 1111（-128 ~ -1 ~ 0 ~ 127）。补码的优点是能多表示一个负数<span class="arithmatex">\(-2^{n-1}\)</span>，且仅保留一个0。**补码与原码互补</strong>
++10 →  <span class="arithmatex">\([x]_{原}\)</span> = 0000 1010 → <span class="arithmatex">\([x]_{补} = [x]_{原}\)</span> = 0000 1010</li>
+</ol>
+<ul>
+<li>10 →  <span class="arithmatex">\([x]_{反}\)</span> = 1111 0101 → <span class="arithmatex">\([x]_{补} = [x]_{反}\)</span>末位 + 1 = 1111 0101 + 1 = 1111 0110</li>
+<li>10 → <span class="arithmatex">\(x\)</span> = -1010 → <span class="arithmatex">\([x]_{补}\)</span> = <span class="arithmatex">\(2^{8}\)</span> - 1010 = 1 0000 0000 - 1010 = 1111 0110</li>
+</ul>
+<ol type="1">
+<li>
+<p><strong>正数：补码 = 原码</strong></p>
+</li>
+<li>
+<p><strong>负数：补码 = 反码末位 + 1 (= 1 0000 0000 + <span class="arithmatex">\(x\)</span>)</strong></p>
+</li>
+</ol>
+<p><span class="arithmatex">\([x]_{补} = \begin{cases}x &amp; 2^{n-1}&gt;x\geq 0\\2^{n}+x = 2^{n}- \mid x \mid &amp; 0 &gt; x \geq -2^{n-1}\end{cases}\)</span></p>
+<blockquote>
+<p>补码的概念类似于生活中的时钟（12h制）。例如现在为6时，若想到3时，可以有6-3=3时，也可以是6+9=3时，此时可以说+9是-3以12为模的补数，即可实现以加法代替减法
+模是指一个计量系统的计数范围，时钟的计量范围是1~12，模=12。表示n位的计算机计量范围是**0 ~ <span class="arithmatex">\(2^{n}-1\)</span>**，模=<span class="arithmatex">\(2^{n}\)</span>
+1. 一个负数加上模即得该负数的补数
+2. 一个正数和一个负数互为补数时，他们的绝对值之和即为模</p>
+</blockquote>
+<ol start="4" type="1">
+<li>移码
+代表的范围为**<span class="arithmatex">\(-2^{n-1}\sim(2^{n-1}-1)\)</span><strong>，8位有符号整数移码范围为0000 0000 ~1111 1111（-128 ~ 127）。优点是能够直接判断真值大小。一般用于表示浮点数的阶码。
+**移码 = 补码符号位取反</strong></li>
+</ol>
+<p><span class="arithmatex">\([x]_{移} = 2^{n-1} + x, 2^{n-1}&gt;x\geq-2^{n-1}\)</span></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/9285a425-3f4b-41da-8105-a412df83a678/image.png?time=1747469700&amp;token=62b438776c12b7e3f41dcc238dc4217bad6940be83b3c5289842249cea041ad7&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/9285a425-3f4b-41da-8105-a412df83a678/image.png?time=1747469700&amp;token=62b438776c12b7e3f41dcc238dc4217bad6940be83b3c5289842249cea041ad7&amp;role=sharePaid"></a></p>
+<blockquote>
+<p><strong>已知任意数Y求其8位原码：绝对值转二进制，高位补0足8位，确定符号位
+    +10的原码：绝对值转二进制 → 1010，高位补0足8位 → 0000 1010，正数最高位为0 → 0000 1010
+    - 10的原码：绝对值转二进制 → 1010，高位补0足8位 → 0000 1010，负数最高位为1 → 1000 1010</strong></p>
+</blockquote>
+<p>**已知负数(-X)求其8位补码：反码末位 + 1
+    -10的补码：原码 → 1000 1010，反码 → 11110101，+1 → 1111 0110</p>
+<p>已知负数(-X)求其8位补码：<span class="arithmatex">\(2^{n} + x\)</span>
+    -10的补码：<span class="arithmatex">\(x\)</span>：-1010 → 计算<span class="arithmatex">\(2^{8}\)</span> - 1010 = 1 0000 0000 - 1010 = 1111 0110
+    -128的补码：<span class="arithmatex">\(x\)</span>：-1000 0000 → 计算<span class="arithmatex">\(2^{8}\)</span> - 1000 0000 = 1 0000 0000 - 1000 0000 = 1000 0000**</p>
+<p>**已知8位补码求负数(-X)：补码的补码，即符号位不变取反末位+1得原码，二进制转十进制（符号位不算）
+    1111 0110 → 1000 1001 → 1000 1010 → -10</p>
+<p>已知8位补码求负数(-X)：逆运算，即末位-1符号位不变取反得原码，二进制转十进制（符号位不算）
+    1111 0110 → 1111 0101 → 1000 1010 → -10</p>
+<p>已知8位补码求负数(-X)：<span class="arithmatex">\([x]_{补}\)</span> - <span class="arithmatex">\(2^{n}\)</span>
+    1111 0110 → 246 → 246 - <span class="arithmatex">\(2^{8}\)</span> → -10
+    1000 0000 → <span class="arithmatex">\(2^{7}\)</span> → <span class="arithmatex">\(2^{7}\)</span> - <span class="arithmatex">\(2^{8}\)</span> = -128**</p>
+<h1 id="_13">定点小数表示法<a class="headerlink" href="#_13" title="Permanent link">¶</a></h1>
+<p>小数点默认固定隐含在符号位右侧，实际并不储存，用于表示**纯小数**，如0.75、0.1222、0.5等</p>
+<p>定点小数的表示方法有原码、反码、补码，转换方式同定点整数(公式中n=1)，仅二进制位权不同，低位补0</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/13857fca-c7c6-4903-abe0-ad8fd126a71e/image.png?time=1747469700&amp;token=397c3af8d14c7ff2f1953a64ed708cca4c722003a5292a1129585be2bce861fe&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/13857fca-c7c6-4903-abe0-ad8fd126a71e/image.png?time=1747469700&amp;token=397c3af8d14c7ff2f1953a64ed708cca4c722003a5292a1129585be2bce861fe&amp;role=sharePaid"></a></p>
+<ol start="5" type="1">
+<li>
+<p>原码：<span class="arithmatex">\(-(1-2^{1-n})\)</span> ≤ x ≤ <span class="arithmatex">\(1-2^{1-n}\)</span></p>
+</li>
+<li>
+<p>反码：<span class="arithmatex">\(-(1-2^{1-n})\)</span> ≤ x ≤ <span class="arithmatex">\(1-2^{1-n}\)</span></p>
+</li>
+<li>
+<p>补码：-1 ≤ x ≤ <span class="arithmatex">\(1-2^{1-n}\)</span></p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>二进制</th>
+<th>作为原码</th>
+<th>作为反码</th>
+<th>作为补码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.000 0000</td>
+<td>+0</td>
+<td>+0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0.000 0001</td>
+<td><span class="arithmatex">\(2^{-7}\)</span></td>
+<td><span class="arithmatex">\(2^{-7}\)</span></td>
+<td><span class="arithmatex">\(2^{-7}\)</span></td>
+</tr>
+<tr>
+<td>......</td>
+<td>......</td>
+<td>......</td>
+<td>......</td>
+</tr>
+<tr>
+<td>0.111 1111</td>
+<td>1-<span class="arithmatex">\(2^{-7}\)</span></td>
+<td>1-<span class="arithmatex">\(2^{-7}\)</span></td>
+<td>1-<span class="arithmatex">\(2^{-7}\)</span></td>
+</tr>
+<tr>
+<td>1.000 0000</td>
+<td>-0</td>
+<td>-(1-<span class="arithmatex">\(2^{-7}\)</span>)</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>1.000 0001</td>
+<td><span class="arithmatex">\(-2^{-7}\)</span></td>
+<td>-(1-<span class="arithmatex">\(2^{-6}\)</span>)</td>
+<td>-(1-<span class="arithmatex">\(2^{-7}\)</span>)</td>
+</tr>
+<tr>
+<td>......</td>
+<td>......</td>
+<td>......</td>
+<td>......</td>
+</tr>
+<tr>
+<td>1.111 1110</td>
+<td>-(1-<span class="arithmatex">\(2^{-6}\)</span>)</td>
+<td>-<span class="arithmatex">\(2^{-7}\)</span></td>
+<td>-<span class="arithmatex">\(2^{-6}\)</span></td>
+</tr>
+<tr>
+<td>1.111 1111</td>
+<td>-(1-<span class="arithmatex">\(2^{-7}\)</span>)</td>
+<td>-0</td>
+<td><span class="arithmatex">\(-2^{-7}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>+0.75
+    真值：+0.11
+    原码：0.110 0000
+    反码：0.110 0000
+    补码：0.110 0000</p>
+<ul>
+<li>0.75
+    真值：-0.11
+    原码：1.110 0000
+    反码：1.001 1111 = 1.111 1111 -0.11
+    补码：1.010 0000 = 1 0.000 0000 - 0.11</li>
+</ul>
+<h1 id="_14">浮点数表示法<a class="headerlink" href="#_14" title="Permanent link">¶</a></h1>
+<p>浮点数即实数，是指机器数表示中小数点位置不固定的数，能够在位数不变的情况下增加数据表示范围，包括整数部分和小数部分，但在计算机中存储只存储数值和小数点在数值中的位置。</p>
+<h2 id="_15">科学计数法<a class="headerlink" href="#_15" title="Permanent link">¶</a></h2>
+<p><span class="arithmatex">\(N = M \times r^{E}\)</span></p>
+<p>r：<span class="arithmatex">\(R^{i}\)</span>（i≥1，一般为1），无需存储</p>
+<p>E：<strong>阶码，反映数值范围大小及小数点的实际位置。计算机中常为补码或移码表示的定点整数（纯整数）</strong></p>
+<p>M：<strong>尾数，数值部分位数反映精度。位数越多，精度越高。计算机中常为原码或补码表示的定点小数（纯小数）</strong></p>
+<p>十进制：+302657264526 = <span class="arithmatex">\(+3.026 \times 10^{11}\)</span>，+11为阶码，+3.026为尾数</p>
+<p>二进制：+0.375 = + 0.011B =$ + 0.00011 \times 2^{2}B$ =$ +0.00011 \times 2^{10}B$，+10为阶码，+0.00011为尾数</p>
+<div class="language-text highlight"><pre><span></span><code>         +0.375 = + 0.011B = $+0.11\times2^{-01}B$ ，-01为阶码，+0.11为尾数
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/52220e18-abde-4dbf-a836-55a9c893b6f8/image.png?time=1747469700&amp;token=5aadff14aaa7e0f89c1068a95fa675b8562bc5b1faa0dad9453e2dec4e78272f&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/52220e18-abde-4dbf-a836-55a9c893b6f8/image.png?time=1747469700&amp;token=5aadff14aaa7e0f89c1068a95fa675b8562bc5b1faa0dad9453e2dec4e78272f&amp;role=sharePaid"></a></p>
+<blockquote>
+<p>假设一个8字长的计算机，阶码共3位，阶符1位，尾数共5位，数符1位，将+0.375进行存储，均以补码形式，以上述第一种为例
+阶码
+    真值：+10 → 原码：010 → 补码：010
+尾数
+    真值：+0.00011 → 原码：0.0001（低位1丢弃） → 补码：0.0001</p>
+</blockquote>
+<p>结果：01000001
+结果 → 浮点数：<span class="arithmatex">\(+0.0001 \times 2^{10}\)</span> = +0.01 = +0.25</p>
+<p>可见结果丧失了精度，因此浮点数存储时尾数还需要规格化</p>
+<h2 id="_16">尾数规格化<a class="headerlink" href="#_16" title="Permanent link">¶</a></h2>
+<p>当尾数数值部分的最高位为无效值0时，结果会丧失精度。因此，<strong>规格化浮点数即尾数最高数值位必须为一个有效值1，即<span class="arithmatex">\(±0.1xxxx \times r^{E}\)</span></strong></p>
+<p>上述+0.375的第二种表示即为规格化表示，相对于第一种，数值部分向左移了3位，阶码减3，这叫左规。</p>
+<ol type="1">
+<li>
+<p>左规
+尾数算数左移或者小数点右移，每移1位，阶码-1</p>
+</li>
+<li>
+<p>右规
+尾数算数右移或者小数点左移，每移1位，阶码+1</p>
+</li>
+</ol>
+<h2 id="ieee-754">IEEE 754标准<a class="headerlink" href="#ieee-754" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/6698d249-43bf-4b05-8e28-bf0120d9541c/image.png?time=1747469700&amp;token=f97c5e94148120d1fbcd124189841782f7e3616c12d039a41d1b1cdfe5d73d50&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/6698d249-43bf-4b05-8e28-bf0120d9541c/image.png?time=1747469700&amp;token=f97c5e94148120d1fbcd124189841782f7e3616c12d039a41d1b1cdfe5d73d50&amp;role=sharePaid"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://tc-cdn.flowus.cn/oss/ba9f8c53-ec7d-4a1e-bba7-dd3404d184e4/image.png?time=1747469700&amp;token=467593f7902279771d2c67fe9d3d01b2e95e833be8d64a35f4a5f7fa4aeb82bf&amp;role=sharePaid" data-title="image.png" data-desc-position="bottom"><img alt="image.png" src="https://tc-cdn.flowus.cn/oss/ba9f8c53-ec7d-4a1e-bba7-dd3404d184e4/image.png?time=1747469700&amp;token=467593f7902279771d2c67fe9d3d01b2e95e833be8d64a35f4a5f7fa4aeb82bf&amp;role=sharePaid"></a></p>
+<p>该标准中，阶码用移码表示，在移码的定义中：<strong>移码 = 真值 + 偏置值</strong></p>
+<blockquote>
+<p>如-46.375 = -101110.011 B = <span class="arithmatex">\(-1.01110011 \times 2^{5} B\)</span> = <span class="arithmatex">\(-1.01110011 \times 2^{101} B\)</span>，转换为单精度浮点数表示：
+数符：1（负数）
+尾数M ： <del>1</del>.01110011000000000000000 B
+阶码E ：101 B + 01111111 B = 1000 0100 B
+结果：11000010001110011000000000000000 B</p>
+</blockquote>
+<p>如单精度浮点数C0A00000 H，表示的浮点数：
+二进制：11000000101000000000000000000000 B
+数符：1（负数）
+尾数M：<del>1</del>.01000000000000000000000 B
+阶码：10000001 B - 01111111 B = 10 B
+结果：<span class="arithmatex">\(-1.01 \times 2^{10} B\)</span> = <span class="arithmatex">\(-1.01 \times 2^{2} B\)</span> = -101 B = -5.0</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  <h2 id="__comments">Comments</h2>
+
+  <script src="https://giscus.app/client.js" data-repo="Harrison-hui/NoteBook" data-repo-id="R_kgDOOrjJmw" data-category="Q&amp;A" data-category-id="DIC_kwDOOrjJm84CqQYj" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async>
+  </script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+        
+          
+          <a href="../%E6%96%87%E6%9C%AC%E4%B8%8E%E5%AD%97%E7%AC%A6/" class="md-footer__link md-footer__link--next" aria-label="Next: 文本与字符">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                文本与字符
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 Harrison 南京医科大学
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+      
+    
+    
+    
+    <a href="mailto:harrison@stu.njmu.edu.cn" target="_blank" rel="noopener me" title="校园邮箱" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M433 179.1c0-97.2-63.7-125.7-63.7-125.7-62.5-28.7-228.6-28.4-290.5 0 0 0-63.7 28.5-63.7 125.7 0 115.7-6.6 259.4 105.6 289.1 40.5 10.7 75.3 13 103.3 11.4 50.8-2.8 79.3-18.1 79.3-18.1l-1.7-36.9s-36.3 11.4-77.1 10.1c-40.4-1.4-83-4.4-89.6-54-.6-4.6-.9-9.3-.9-13.9 85.6 20.9 158.7 9.1 178.7 6.7 56.1-6.7 105-41.3 111.2-72.9 9.8-49.8 9-121.5 9-121.5zm-75.1 125.2h-46.6V190.1c0-49.7-64-51.6-64 6.9v62.5H201V197c0-58.5-64-56.6-64-6.9v114.2H90.3c0-122.1-5.2-147.9 18.4-175 25.9-28.9 79.8-30.8 103.8 6.1l11.6 19.5 11.6-19.5c24.1-37.1 78.1-34.8 103.8-6.1 23.7 27.3 18.4 53 18.4 175"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/Harrison-hui" target="_blank" rel="noopener" title="Github仓库" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "toc.follow", "navigation.top", "navigation.footer", "search.share", "search.suggest", "search.highlight", "content.footnote.tooltips", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../../javascripts/tablesort.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
