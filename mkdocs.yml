@@ -216,6 +216,7 @@ plugins:
   - mkdocs-jupyter:
       execute: true
       allow_errors: true
+      include_source: True
   - glightbox:
       touchNavigation: true
       zoomable: true
